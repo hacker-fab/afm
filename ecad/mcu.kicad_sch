@@ -1,0 +1,57 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ca60d817-ec8b-4b0f-a09a-4779de70a983")
+	(paper "A4")
+	(title_block
+		(rev "0.0.0")
+		(company "Hacker Fab")
+		(comment 1 "Yash Karthik")
+	)
+	(lib_symbols)
+	(hierarchical_label "c"
+		(shape input)
+		(at 33.02 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "339dc098-d834-4dcd-a14c-f85e8bd2cd0e")
+	)
+	(hierarchical_label "b"
+		(shape input)
+		(at 33.02 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3f5626c7-fbf1-4ddd-9fd4-7e221ed5fc96")
+	)
+	(hierarchical_label "a"
+		(shape input)
+		(at 33.02 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "93317daf-ca86-40b9-aae8-fe9b0d94ea62")
+	)
+	(hierarchical_label "d"
+		(shape input)
+		(at 33.02 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c03c86a0-e753-4277-a5c4-08daea8b4796")
+	)
+)

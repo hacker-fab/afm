@@ -10,7 +10,7 @@
 		(comment 1 "Yash Karthik")
 	)
 	(lib_symbols
-		(symbol "Amplifier_Operational:TL082"
+		(symbol "Amplifier_Operational:MCP6002-xP"
 			(pin_names
 				(offset 0.127)
 			)
@@ -30,7 +30,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "TL082"
+			(property "Value" "MCP6002-xP"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -52,7 +52,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -63,7 +63,7 @@
 					)
 				)
 			)
-			(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
+			(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -106,7 +106,7 @@
 					)
 				)
 			)
-			(symbol "TL082_1_1"
+			(symbol "MCP6002-xP_1_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -174,7 +174,7 @@
 					)
 				)
 			)
-			(symbol "TL082_2_1"
+			(symbol "MCP6002-xP_2_1"
 				(polyline
 					(pts
 						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
@@ -242,7 +242,7 @@
 					)
 				)
 			)
-			(symbol "TL082_3_1"
+			(symbol "MCP6002-xP_3_1"
 				(pin power_in line
 					(at -2.54 -7.62 90)
 					(length 3.81)
@@ -576,194 +576,6 @@
 					(at 0 -2.54 90)
 					(length 2.032)
 					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1549,6 +1361,188 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:BAT54W"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BAT54W"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Schottky barrier diode, SOT-323"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "schottky diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?323*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BAT54W_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BAT54W_1_1"
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 0 0 90)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+5V"
 			(power global)
 			(pin_numbers
@@ -1844,12 +1838,6 @@
 		(uuid "046a55ba-6cfd-4c09-bbea-71f8c43a1903")
 	)
 	(junction
-		(at 152.4 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0c6dc27a-fc99-4387-8df2-f756b1b47fab")
-	)
-	(junction
 		(at 119.38 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1872,6 +1860,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6d9a2c26-2125-4079-96a4-5f025b810a8c")
+	)
+	(junction
+		(at 152.4 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "91ba6588-7e5e-4128-9dea-f2dc65ff5fff")
 	)
 	(junction
 		(at 203.2 109.22)
@@ -1985,6 +1979,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 80.01) (xy 152.4 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bbbb5ec-a22d-425c-965a-04425a85a1ac")
+	)
+	(wire
+		(pts
 			(xy 156.21 92.71) (xy 144.78 92.71)
 		)
 		(stroke
@@ -2085,7 +2089,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 85.09) (xy 170.18 85.09)
+			(xy 162.56 86.36) (xy 170.18 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2105,7 +2109,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 85.09) (xy 170.18 114.3)
+			(xy 170.18 86.36) (xy 170.18 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2145,23 +2149,13 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 93.98) (xy 152.4 85.09)
+			(xy 152.4 93.98) (xy 152.4 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "628ab204-7982-45ea-a789-b9a1f6bc0d5f")
-	)
-	(wire
-		(pts
-			(xy 152.4 80.01) (xy 152.4 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62ba931e-442e-4419-9f33-ec5f51f066b7")
 	)
 	(wire
 		(pts
@@ -2335,7 +2329,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 85.09) (xy 157.48 85.09)
+			(xy 152.4 86.36) (xy 157.48 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2689,7 +2683,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Q_PNP"
+		(property "Value" "2N2907A/MMBT2907A"
 			(at 205.74 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2747,105 +2741,6 @@
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
 					(reference "Q1")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 154.94 101.6 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "19a9af94-dd51-4caf-96e6-b065454805cb")
-		(property "Reference" "U1"
-			(at 161.036 106.172 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TL082"
-			(at 161.036 108.712 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "8a9543ea-592c-42e0-8d39-deff05d4679e")
-		)
-		(pin "3"
-			(uuid "e261f414-c9fa-4236-aa57-0862a51bc210")
-		)
-		(pin "8"
-			(uuid "0754daec-0d4f-4b49-b35d-f33abe4f010c")
-		)
-		(pin "4"
-			(uuid "2a5530d7-5ba5-4ebf-b896-4f38c18be722")
-		)
-		(pin "7"
-			(uuid "5b39743b-e8ab-47d0-b1f7-bf30dcbffdfe")
-		)
-		(pin "6"
-			(uuid "cbc3eba3-54d2-42af-abc1-4adef7b4f800")
-		)
-		(pin "2"
-			(uuid "a12cba8b-da83-4d21-b3e1-e3454e610192")
-		)
-		(pin "1"
-			(uuid "c6330631-0fed-4d9e-95ee-abdc8075f08e")
-		)
-		(instances
-			(project "afm"
-				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
-					(reference "U1")
-					(unit 3)
 				)
 			)
 		)
@@ -3015,18 +2910,20 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 203.2 115.57 270)
-		(unit 1)
+		(lib_id "Amplifier_Operational:MCP6002-xP")
+		(at 262.89 35.56 0)
+		(mirror x)
+		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "385d4400-5ce4-4c37-ba41-82c05ede856d")
-		(property "Reference" "D2"
-			(at 201.676 118.618 0)
+		(fields_autoplaced yes)
+		(uuid "3b4f9be8-7192-4edc-94e1-47af22080e8d")
+		(property "Reference" "U2"
+			(at 262.89 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3035,8 +2932,8 @@
 				)
 			)
 		)
-		(property "Value" "??"
-			(at 201.676 112.522 0)
+		(property "Value" "MCP6002-xP"
+			(at 262.89 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3045,8 +2942,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 203.2 115.57 0)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 262.89 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3056,8 +2953,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 203.2 115.57 0)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 262.89 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3067,30 +2964,8 @@
 				)
 			)
 		)
-		(property "Description" "Diode"
-			(at 203.2 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 203.2 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 203.2 115.57 0)
+		(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
+			(at 262.89 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3101,16 +2976,133 @@
 			)
 		)
 		(pin "2"
-			(uuid "b43840b5-4814-403f-8f4d-01d67b01a17d")
+			(uuid "d249851b-4e8c-4356-b43d-16f49cafc8b3")
 		)
 		(pin "1"
-			(uuid "11ce3a02-a163-468d-a685-04acf5e96924")
+			(uuid "d5d55c01-6fe2-4078-9f61-03bb6c83fbfc")
+		)
+		(pin "3"
+			(uuid "de78863f-a066-4fda-ad24-23ecd30738ba")
+		)
+		(pin "5"
+			(uuid "6cd0d8e5-295f-4b26-8110-aa91cdd88e00")
+		)
+		(pin "6"
+			(uuid "e3e4d8f6-b05c-4038-877f-b87ea8feceb4")
+		)
+		(pin "7"
+			(uuid "3053e66b-6f92-4863-b7db-461ed66c27ab")
+		)
+		(pin "4"
+			(uuid "e4e810c5-0492-45c2-8ef7-e19a1b778a19")
+		)
+		(pin "8"
+			(uuid "ec386e66-e808-46b8-aefd-68e69b8ca653")
 		)
 		(instances
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
-					(reference "D2")
-					(unit 1)
+					(reference "U2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xP")
+		(at 154.94 101.6 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b81dd25-3208-4f2f-ad10-9921d0b3dc94")
+		(property "Reference" "U2"
+			(at 144.78 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP6002-xP"
+			(at 153.924 108.204 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d249851b-4e8c-4356-b43d-16f49cafc8b4")
+		)
+		(pin "1"
+			(uuid "d5d55c01-6fe2-4078-9f61-03bb6c83fbfd")
+		)
+		(pin "3"
+			(uuid "de78863f-a066-4fda-ad24-23ecd30738bb")
+		)
+		(pin "5"
+			(uuid "6cd0d8e5-295f-4b26-8110-aa91cdd88e01")
+		)
+		(pin "6"
+			(uuid "e3e4d8f6-b05c-4038-877f-b87ea8feceb5")
+		)
+		(pin "7"
+			(uuid "3053e66b-6f92-4863-b7db-461ed66c27ac")
+		)
+		(pin "4"
+			(uuid "e4e810c5-0492-45c2-8ef7-e19a1b778a1a")
+		)
+		(pin "8"
+			(uuid "ec386e66-e808-46b8-aefd-68e69b8ca654")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
+					(reference "U2")
+					(unit 3)
 				)
 			)
 		)
@@ -3276,7 +3268,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 160.02 85.09 90)
+		(at 160.02 86.36 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3286,7 +3278,7 @@
 		(dnp no)
 		(uuid "6d4306e3-7e7f-4f9d-b6a9-93bcc012bddc")
 		(property "Reference" "C2"
-			(at 157.48 83.566 90)
+			(at 157.48 84.836 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3296,7 +3288,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 164.084 83.566 90)
+			(at 164.084 84.836 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3306,7 +3298,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 85.09 0)
+			(at 160.02 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3317,7 +3309,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 85.09 0)
+			(at 160.02 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3328,7 +3320,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 160.02 85.09 0)
+			(at 160.02 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3436,104 +3428,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 262.89 35.56 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "777d3d23-fff2-46b0-bccb-9ca949c69806")
-		(property "Reference" "U1"
-			(at 262.89 25.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TL082"
-			(at 262.89 27.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-			(at 262.89 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 262.89 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 262.89 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "3ba99893-8920-4fdd-b719-d4deb6b902fb")
-		)
-		(pin "3"
-			(uuid "e261f414-c9fa-4236-aa57-0862a51bc211")
-		)
-		(pin "8"
-			(uuid "39bf3892-3fb0-457d-a98e-ca78207b1999")
-		)
-		(pin "4"
-			(uuid "534dde0d-6cd7-425a-a0b7-6bdfe35b038c")
-		)
-		(pin "7"
-			(uuid "4944fd1f-aa07-4937-83e9-4f045e044e47")
-		)
-		(pin "6"
-			(uuid "6760cae2-73ee-432c-8b20-65a3b636adb0")
-		)
-		(pin "2"
-			(uuid "a12cba8b-da83-4d21-b3e1-e3454e610193")
-		)
-		(pin "1"
-			(uuid "c6330631-0fed-4d9e-95ee-abdc8075f08f")
-		)
-		(instances
-			(project "afm"
-				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
-					(reference "U1")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 85.09 101.6 0)
 		(unit 1)
@@ -3609,104 +3503,6 @@
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 154.94 101.6 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7f9fe142-37a8-4a2a-8992-ba41578ced41")
-		(property "Reference" "U1"
-			(at 157.48 108.712 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TL082"
-			(at 157.48 106.172 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 154.94 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "8a9543ea-592c-42e0-8d39-deff05d467a0")
-		)
-		(pin "3"
-			(uuid "db7447ad-3e8d-428e-84aa-108b84da49bf")
-		)
-		(pin "8"
-			(uuid "39bf3892-3fb0-457d-a98e-ca78207b199a")
-		)
-		(pin "4"
-			(uuid "534dde0d-6cd7-425a-a0b7-6bdfe35b038d")
-		)
-		(pin "7"
-			(uuid "5b39743b-e8ab-47d0-b1f7-bf30dcbffe00")
-		)
-		(pin "6"
-			(uuid "cbc3eba3-54d2-42af-abc1-4adef7b4f802")
-		)
-		(pin "2"
-			(uuid "14bacd72-bff3-42a8-be6f-1db97f0865ca")
-		)
-		(pin "1"
-			(uuid "5f2aee0f-c6d2-4fa7-aa22-62066fe2c227")
-		)
-		(instances
-			(project "afm"
-				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
-					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -3870,6 +3666,104 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:MCP6002-xP")
+		(at 154.94 101.6 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "be68804b-218b-438b-9fa5-d54a25975a8d")
+		(property "Reference" "U2"
+			(at 146.7055 106.172 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6002-xP"
+			(at 160.3851 106.426 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1MHz, Low-Power Op Amp, DIP-8"
+			(at 154.94 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d249851b-4e8c-4356-b43d-16f49cafc8b5")
+		)
+		(pin "1"
+			(uuid "d5d55c01-6fe2-4078-9f61-03bb6c83fbfe")
+		)
+		(pin "3"
+			(uuid "de78863f-a066-4fda-ad24-23ecd30738bc")
+		)
+		(pin "5"
+			(uuid "6cd0d8e5-295f-4b26-8110-aa91cdd88e02")
+		)
+		(pin "6"
+			(uuid "e3e4d8f6-b05c-4038-877f-b87ea8feceb6")
+		)
+		(pin "7"
+			(uuid "3053e66b-6f92-4863-b7db-461ed66c27ad")
+		)
+		(pin "4"
+			(uuid "e4e810c5-0492-45c2-8ef7-e19a1b778a1b")
+		)
+		(pin "8"
+			(uuid "ec386e66-e808-46b8-aefd-68e69b8ca655")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 140.97 87.63 180)
 		(unit 1)
@@ -3943,6 +3837,91 @@
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BAT54W")
+		(at 203.2 115.57 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d158a30a-dea9-4553-b99b-97be0f051e9d")
+		(property "Reference" "D3"
+			(at 200.66 113.9824 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BAT54W"
+			(at 200.66 116.5224 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+			(at 207.645 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
+			(at 203.2 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky barrier diode, SOT-323"
+			(at 203.2 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "286bdc1a-11b9-437e-99c7-f6dc554da785")
+		)
+		(pin "2"
+			(uuid "ee07da72-7b9a-4f5e-b769-3b76512ccdb0")
+		)
+		(pin "3"
+			(uuid "d462f0ca-6c6d-43cf-99ba-d177da9dac12")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/15680402-d9a3-4e18-a79a-80d2d5ffc55c"
+					(reference "D3")
 					(unit 1)
 				)
 			)

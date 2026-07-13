@@ -1,0 +1,67 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "21dd17aa-895b-4226-b7a9-69bb75f67e46")
+	(paper "A4")
+	(title_block
+		(rev "0.0.0")
+		(company "Hacker Fab")
+		(comment 1 "Yash Karthik")
+	)
+	(lib_symbols)
+	(text "ADS1256?"
+		(exclude_from_sim no)
+		(at 71.374 101.346 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c94f45fd-2414-4cc8-83d0-9ae213577ea1")
+	)
+	(hierarchical_label "Q2_digital"
+		(shape output)
+		(at 95.25 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "222657f4-22f5-497d-aeb6-501718cbe10f")
+	)
+	(hierarchical_label "Q1_digital"
+		(shape output)
+		(at 95.25 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "278cae27-8a43-4fb5-b32b-603a7734f338")
+	)
+	(hierarchical_label "Q1_amped"
+		(shape input)
+		(at 76.2 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "705d93ea-8bce-4c4f-92ee-e8e2e10902ce")
+	)
+	(hierarchical_label "Q2_amped"
+		(shape input)
+		(at 76.2 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a82d3366-0730-4f7a-98d8-98ad981905e8")
+	)
+)

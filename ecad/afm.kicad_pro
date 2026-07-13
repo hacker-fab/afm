@@ -453,7 +453,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "#PWR3-4,Q1,D1-2,C2-3,R1-7",
+    "used_designators": "D3,JP1,U1-3",
     "variants": []
   },
   "sheets": [
@@ -464,6 +464,26 @@
     [
       "15680402-d9a3-4e18-a79a-80d2d5ffc55c",
       "Laser APC"
+    ],
+    [
+      "97dfa13c-f2a2-43ce-b380-ad399694b675",
+      "Amplifier Stages"
+    ],
+    [
+      "1eed2112-9852-44bd-91f9-4a36fadefb6d",
+      "ADCs"
+    ],
+    [
+      "609e7c1b-9183-4cd7-8dc2-8610036ea669",
+      "MCU"
+    ],
+    [
+      "65bf24c3-2f15-492f-9b97-45a762cfe8cd",
+      "Amplifier Stages1"
+    ],
+    [
+      "1965de3d-0b69-4cea-ac02-6b5e4bf6a4c8",
+      "ADCs1"
     ]
   ],
   "text_variables": {},
