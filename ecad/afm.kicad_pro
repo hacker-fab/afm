@@ -322,6 +322,14 @@
       {
         "netclass": "POWER",
         "pattern": "/LD_DVD_LD"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DVD_LD"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/Laser APC/LD_DVD"
       }
     ]
   },
@@ -453,7 +461,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "D3,JP1,U1-3",
+    "used_designators": "#PWR5-7",
     "variants": []
   },
   "sheets": [
