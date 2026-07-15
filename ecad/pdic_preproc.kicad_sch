@@ -1,0 +1,571 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "b78de05e-3790-4e16-858d-fd67082442c5")
+	(paper "A4")
+	(title_block
+		(title "PDIC Preprocessing")
+		(date "2026-07-14")
+		(rev "0.0.0")
+		(company "Hacker Fab")
+		(comment 1 "Yash Karthik")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 97.79 92.71) (xy 111.76 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "058886be-a6ad-495b-86bb-2ae34caac73d")
+	)
+	(wire
+		(pts
+			(xy 133.35 95.25) (xy 146.05 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fe99c12-6631-4942-8ae9-8a6cd15019ed")
+	)
+	(wire
+		(pts
+			(xy 97.79 102.87) (xy 111.76 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42dd7342-efdb-402a-b3d6-45b8cd12fdb7")
+	)
+	(wire
+		(pts
+			(xy 133.35 92.71) (xy 146.05 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55140e50-3a67-4e02-873c-1698bb4a980e")
+	)
+	(wire
+		(pts
+			(xy 133.35 105.41) (xy 146.05 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dfdd7c7-a0ee-46e1-ab7e-080fd1631a32")
+	)
+	(wire
+		(pts
+			(xy 97.79 105.41) (xy 111.76 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9563976c-e1bb-4c3b-9a82-940cd461c2c3")
+	)
+	(wire
+		(pts
+			(xy 172.72 95.25) (xy 181.61 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae13dae2-8678-4621-9881-7edc356237de")
+	)
+	(wire
+		(pts
+			(xy 172.72 102.87) (xy 181.61 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec82684-617f-42d5-ad66-8abd3783e347")
+	)
+	(wire
+		(pts
+			(xy 172.72 105.41) (xy 181.61 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c32abb14-0905-4097-9320-7ed98513e0ad")
+	)
+	(wire
+		(pts
+			(xy 97.79 95.25) (xy 111.76 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce76d628-bd09-4699-b581-56ebe768f26f")
+	)
+	(wire
+		(pts
+			(xy 172.72 92.71) (xy 181.61 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e11a676c-8796-46d1-af27-c25ddb2cda7f")
+	)
+	(wire
+		(pts
+			(xy 133.35 102.87) (xy 146.05 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e80981c1-4a91-460a-9a0e-ff651f2c89b4")
+	)
+	(hierarchical_label "d_raw"
+		(shape input)
+		(at 97.79 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4ac82266-6e47-4fe9-8e3c-e9c05486755f")
+	)
+	(hierarchical_label "b_raw"
+		(shape input)
+		(at 97.79 95.25 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "685a7537-35ec-4ae2-8b23-9a0e1574d3e4")
+	)
+	(hierarchical_label "a_digital"
+		(shape output)
+		(at 181.61 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "72bb537e-d6ad-4661-a0eb-55f3475dbbdc")
+	)
+	(hierarchical_label "c_digital"
+		(shape output)
+		(at 181.61 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d4fc700-340e-4ae4-ae2f-371325abcf28")
+	)
+	(hierarchical_label "b_digital"
+		(shape output)
+		(at 181.61 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9928045b-bf7a-4820-a21f-24ed132ef601")
+	)
+	(hierarchical_label "c_raw"
+		(shape input)
+		(at 97.79 102.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "998d0977-cdc6-41c7-b964-a93531466331")
+	)
+	(hierarchical_label "a_raw"
+		(shape input)
+		(at 97.79 92.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a240c306-1992-4e48-bcc1-010166f5e791")
+	)
+	(hierarchical_label "d_digital"
+		(shape output)
+		(at 181.61 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "db0f250f-7fb5-4eff-a49b-8fb1d01ff3d0")
+	)
+	(sheet
+		(at 146.05 91.44)
+		(size 26.67 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 229 191 1)
+		)
+		(uuid "14f41077-8ee4-46b4-8699-6ceb5aa1d801")
+		(property "Sheetname" "ADCs1"
+			(at 146.05 90.7284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "focus_signal_adc.kicad_sch"
+			(at 146.05 97.1046 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Q1_amped" input
+			(at 146.05 92.71 180)
+			(uuid "98263b06-9a7d-4321-a101-d0ee8f5c02b5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q2_amped" input
+			(at 146.05 95.25 180)
+			(uuid "1a619429-7011-4cea-8fe7-bc553b9265e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q1_digital" output
+			(at 172.72 92.71 0)
+			(uuid "ab1976ef-a74c-4969-8a93-680d2da532cd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q2_digital" output
+			(at 172.72 95.25 0)
+			(uuid "103feab3-d058-4943-b036-8b8bfad3dcfe")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/1dc792cd-316d-4a98-a06d-e76af60f931f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 146.05 101.6)
+		(size 26.67 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 229 191 1)
+		)
+		(uuid "a48bc72a-5d05-40b5-811b-edae68bdb18b")
+		(property "Sheetname" "ADCs"
+			(at 146.05 100.8884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "focus_signal_adc.kicad_sch"
+			(at 146.05 107.2646 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Q1_amped" input
+			(at 146.05 102.87 180)
+			(uuid "4531f780-5cb3-43cb-ad96-25f14940c301")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q2_amped" input
+			(at 146.05 105.41 180)
+			(uuid "6ec2ff8e-1f29-4107-b6e2-22f61f40f18d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q1_digital" output
+			(at 172.72 102.87 0)
+			(uuid "9ab40bda-02a1-497c-9470-d5b50281fb96")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q2_digital" output
+			(at 172.72 105.41 0)
+			(uuid "e9eec869-7105-47dd-8f44-dd0bce600f7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/1dc792cd-316d-4a98-a06d-e76af60f931f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 91.44)
+		(size 21.59 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 229 191 1)
+		)
+		(uuid "bf343947-7a37-4d89-a40c-d0985c181e57")
+		(property "Sheetname" "Amplifier Stages1"
+			(at 111.76 90.7284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "quadrant_amp_stages.kicad_sch"
+			(at 111.76 97.1046 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Q1_amped" output
+			(at 133.35 92.71 0)
+			(uuid "846bfea6-8199-40ce-9659-2aa1287f63ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q2_amped" output
+			(at 133.35 95.25 0)
+			(uuid "8437ef19-ae4b-4db4-b0c7-f12a85e8d774")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q1_raw" input
+			(at 111.76 92.71 180)
+			(uuid "e3eac216-c509-49e0-8f95-0810c914b0f7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q2_raw" input
+			(at 111.76 95.25 180)
+			(uuid "572f7102-3dd3-4f76-af2f-cda348c4e210")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/1dc792cd-316d-4a98-a06d-e76af60f931f"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 101.6)
+		(size 21.59 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 229 191 1)
+		)
+		(uuid "f8f57409-0016-43e7-bb83-f803cfb7ae14")
+		(property "Sheetname" "Amplifier Stages"
+			(at 111.76 100.8884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "quadrant_amp_stages.kicad_sch"
+			(at 111.76 107.2646 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Q1_amped" output
+			(at 133.35 102.87 0)
+			(uuid "690a765f-49a5-4bb8-badb-05586c5b0ca7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q2_amped" output
+			(at 133.35 105.41 0)
+			(uuid "8a6f3d26-fafd-4cdb-84a4-a7752747e21e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Q1_raw" input
+			(at 111.76 102.87 180)
+			(uuid "232328da-42c1-4257-b5fd-d9888dd66fe3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Q2_raw" input
+			(at 111.76 105.41 180)
+			(uuid "b862bba0-3105-4ad2-9dde-04c732b56efc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/1dc792cd-316d-4a98-a06d-e76af60f931f"
+					(page "5")
+				)
+			)
+		)
+	)
+)

@@ -283,9 +283,19 @@
       {
         "bus_width": 8,
         "line_style": 0,
-        "name": "GND",
+        "name": "GND_LD",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 2,
+        "schematic_color": "rgb(72, 72, 72)",
+        "tuning_profile": "",
+        "wire_width": 12
+      },
+      {
+        "bus_width": 8,
+        "line_style": 0,
+        "name": "GND_PD",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
         "schematic_color": "rgb(0, 0, 0)",
         "tuning_profile": "",
         "wire_width": 12
@@ -295,7 +305,7 @@
         "line_style": 0,
         "name": "POWER",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 0,
         "schematic_color": "rgb(255, 0, 0)",
         "tuning_profile": "",
         "wire_width": 12
@@ -316,20 +326,28 @@
         "pattern": "-**V**"
       },
       {
-        "netclass": "GND",
-        "pattern": "GND"
+        "netclass": "GND_LD",
+        "pattern": "GND_LD"
       },
       {
-        "netclass": "POWER",
+        "netclass": "Default",
         "pattern": "/LD_DVD_LD"
       },
       {
-        "netclass": "POWER",
+        "netclass": "Default",
         "pattern": "/DVD_LD"
       },
       {
-        "netclass": "POWER",
+        "netclass": "Default",
         "pattern": "/Laser APC/LD_DVD"
+      },
+      {
+        "netclass": "GND_PD",
+        "pattern": "GND_PD"
+      },
+      {
+        "netclass": "POWER_PD",
+        "pattern": "POWER_PD"
       }
     ]
   },
@@ -461,7 +479,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "#PWR5-7",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -470,28 +488,36 @@
       "Root"
     ],
     [
+      "ee82208d-d5c1-459a-a4b7-fe805623b0b7",
+      "OPU"
+    ],
+    [
+      "1dc792cd-316d-4a98-a06d-e76af60f931f",
+      "PDIC Pre-processing"
+    ],
+    [
+      "14f41077-8ee4-46b4-8699-6ceb5aa1d801",
+      "ADCs1"
+    ],
+    [
+      "a48bc72a-5d05-40b5-811b-edae68bdb18b",
+      "ADCs"
+    ],
+    [
+      "f8f57409-0016-43e7-bb83-f803cfb7ae14",
+      "Amplifier Stages"
+    ],
+    [
+      "bf343947-7a37-4d89-a40c-d0985c181e57",
+      "Amplifier Stages1"
+    ],
+    [
       "15680402-d9a3-4e18-a79a-80d2d5ffc55c",
       "Laser APC"
     ],
     [
-      "97dfa13c-f2a2-43ce-b380-ad399694b675",
-      "Amplifier Stages"
-    ],
-    [
-      "1eed2112-9852-44bd-91f9-4a36fadefb6d",
-      "ADCs"
-    ],
-    [
       "609e7c1b-9183-4cd7-8dc2-8610036ea669",
       "MCU"
-    ],
-    [
-      "65bf24c3-2f15-492f-9b97-45a762cfe8cd",
-      "Amplifier Stages1"
-    ],
-    [
-      "1965de3d-0b69-4cea-ac02-6b5e4bf6a4c8",
-      "ADCs1"
     ]
   ],
   "text_variables": {},

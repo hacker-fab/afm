@@ -3950,14 +3950,15 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 85.09 135.89 0)
+		(property "Value" "GND_LD"
+			(at 87.63 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4029,13 +4030,14 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 85.09 68.58 0)
+			(at 87.63 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
