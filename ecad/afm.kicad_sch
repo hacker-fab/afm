@@ -208,8 +208,8 @@
 		(uuid "fd198292-7fee-4cd8-bce9-fc9823d93695")
 	)
 	(sheet
-		(at 27.94 101.6)
-		(size 12.7 7.62)
+		(at 27.94 102.87)
+		(size 12.7 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -224,7 +224,7 @@
 		)
 		(uuid "15680402-d9a3-4e18-a79a-80d2d5ffc55c")
 		(property "Sheetname" "Laser APC"
-			(at 27.94 100.8884 0)
+			(at 27.94 102.1584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -235,7 +235,7 @@
 			)
 		)
 		(property "Sheetfile" "laser_apc.kicad_sch"
-			(at 27.94 109.8046 0)
+			(at 27.94 108.5346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
