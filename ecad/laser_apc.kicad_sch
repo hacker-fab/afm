@@ -5,9 +5,12 @@
 	(uuid "4655edd2-7062-4911-9193-80b4142facdd")
 	(paper "A4")
 	(title_block
+		(title "Laser Automatic Power Controller")
+		(date "2026-07-17")
 		(rev "0.0.0")
 		(company "Hacker Fab")
 		(comment 1 "Yash Karthik")
+		(comment 4 "Verified: 2026-07-17")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:MCP6002-xP"
@@ -1820,7 +1823,7 @@
 		)
 		(uuid "c15b9402-8338-43b1-bde1-74b7062ae86c")
 	)
-	(text "If too bright => reverse bias current produced.\n=> Raises voltage at Sense+ input.\n=> Op-amp raises output voltage to help Sense- catch-up.\n=> PNP bjt lowers current if base closer to E\n=> Lower LD brightness"
+	(text "If too bright => MD current increases. (flows MD kathode to anode)\n=> Raises voltage at Sense+ input.\n=> Op-amp raises output voltage to help Sense- catch-up.\n=> PNP bjt lowers current since base is closer to E\n=> Lower LD brightness"
 		(exclude_from_sim no)
 		(at 178.054 156.972 0)
 		(effects

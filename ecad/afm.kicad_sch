@@ -56,17 +56,6 @@
 		)
 		(uuid "77a0a2f7-7e65-4bc5-b5e9-a990c915d60e")
 	)
-	(text "- [x] check if the PDIC and Laser have different GNDS: YES; can i still connect them?\n\n- [x] schematic: unity-gain amps for FES buffers\n- [ ] figure out basic voicecoil driving. sch + proto\n\n- [ ] proto the LD apc.\n- [ ] characterize FES signals at focus levels (using voicecoils)\n\n- [ ] figure out if more signal conditioning is needed\n- [ ] research ADCs"
-		(exclude_from_sim no)
-		(at 13.716 25.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8da67d9f-bed2-45b2-b22c-fcee1f56417e")
-	)
 	(wire
 		(pts
 			(xy 67.31 92.71) (xy 90.17 92.71)
