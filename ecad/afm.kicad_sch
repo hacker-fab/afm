@@ -24,28 +24,6 @@
 		)
 		(uuid "1b04fc74-5ad3-41b1-b741-03a6c48332f5")
 	)
-	(rectangle
-		(start 82.55 54.61)
-		(end 113.03 72.39)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "e8d98d71-6d9a-4de9-9a97-e570287eabee")
-	)
-	(text "Voicecoil Driver stuff"
-		(exclude_from_sim no)
-		(at 97.028 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4544eca9-1c1c-4bce-8b48-0501792115fe")
-	)
 	(text "Piezo Driver stuff"
 		(exclude_from_sim no)
 		(at 177.8 91.948 0)
@@ -65,16 +43,6 @@
 			(type default)
 		)
 		(uuid "3ade4d2d-b6ad-460d-a290-7fb52e80d0a9")
-	)
-	(polyline
-		(pts
-			(xy 113.03 64.77) (xy 147.32 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3eebe23f-09cc-42e1-ae04-75ea07dc4752")
 	)
 	(polyline
 		(pts
@@ -106,16 +74,6 @@
 		)
 		(uuid "5a2d1a6c-4bde-41d6-906d-d89d27bf876d")
 	)
-	(polyline
-		(pts
-			(xy 147.32 74.93) (xy 147.32 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "908c9617-a0bc-4599-b4e8-e0a1413871b8")
-	)
 	(wire
 		(pts
 			(xy 67.31 87.63) (xy 90.17 87.63)
@@ -145,16 +103,6 @@
 			(type default)
 		)
 		(uuid "ac021e3e-4262-4fad-8de2-6eafa0af807a")
-	)
-	(polyline
-		(pts
-			(xy 147.32 64.77) (xy 147.32 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9d8cd6e-12a7-491a-bf11-d7293ab7a76c")
 	)
 	(wire
 		(pts
@@ -195,6 +143,53 @@
 			(type default)
 		)
 		(uuid "fd198292-7fee-4cd8-bce9-fc9823d93695")
+	)
+	(sheet
+		(at 91.44 60.96)
+		(size 17.78 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "152e488a-5c59-4955-a770-fd5dc463781b")
+		(property "Sheetname" "VCA Driver"
+			(at 91.44 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "vca_driver.kicad_sch"
+			(at 91.44 69.1646 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
+					(page "9")
+				)
+			)
+		)
 	)
 	(sheet
 		(at 27.94 102.87)

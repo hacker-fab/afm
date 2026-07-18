@@ -479,7 +479,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR5,#PWR13-14,R8-9,Q2-3,U1",
     "variants": []
   },
   "sheets": [
@@ -518,6 +518,10 @@
     [
       "609e7c1b-9183-4cd7-8dc2-8610036ea669",
       "MCU"
+    ],
+    [
+      "152e488a-5c59-4955-a770-fd5dc463781b",
+      "VCA Driver"
     ]
   ],
   "text_variables": {},
