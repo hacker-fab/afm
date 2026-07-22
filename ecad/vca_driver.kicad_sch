@@ -1339,6 +1339,16 @@
 		)
 		(uuid "2b60d399-0e9c-43a5-8fdb-86cc3de2fb11")
 	)
+	(text "level-shifter stage"
+		(exclude_from_sim no)
+		(at 74.676 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4b641456-c715-48f6-9d00-31dc9821f23f")
+	)
 	(junction
 		(at 157.48 116.84)
 		(diameter 0)
@@ -1661,7 +1671,7 @@
 	)
 	(hierarchical_label "DRV_CURR_Vref"
 		(shape input)
-		(at 95.25 91.44 180)
+		(at 63.5 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2349,13 +2359,7 @@
 		)
 	)
 	(group ""
-		(uuid "5ad5dfe6-fc72-4d67-aab2-6f7308086335")
-		(members "7da5fe76-c194-4e79-b321-c29380be2a89" "7fe1ba20-d693-422a-b992-88df42c37689"
-			"9cf646c3-572a-464c-8c83-e4a098683738"
-		)
-	)
-	(group ""
-		(uuid "5ad5dfe6-fc72-4d67-aab2-6f7308086335")
+		(uuid "5ad5dfe6-fc72-4d67-aab2-6f7308086336")
 		(members "7da5fe76-c194-4e79-b321-c29380be2a89" "7fe1ba20-d693-422a-b992-88df42c37689"
 			"9cf646c3-572a-464c-8c83-e4a098683738"
 		)

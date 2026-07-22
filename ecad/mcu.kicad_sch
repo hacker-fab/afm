@@ -32,6 +32,17 @@
 		)
 		(uuid "3f5626c7-fbf1-4ddd-9fd4-7e221ed5fc96")
 	)
+	(hierarchical_label "VCA_Vref"
+		(shape output)
+		(at 52.07 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7bd4b3e3-bbcb-4550-b640-49dafbbb8c17")
+	)
 	(hierarchical_label "a"
 		(shape input)
 		(at 33.02 78.74 180)

@@ -13,8 +13,8 @@
 	)
 	(lib_symbols)
 	(rectangle
-		(start 168.148 85.852)
-		(end 188.468 98.552)
+		(start 216.408 93.472)
+		(end 236.728 106.172)
 		(stroke
 			(width 0)
 			(type default)
@@ -26,7 +26,7 @@
 	)
 	(text "Piezo Driver stuff"
 		(exclude_from_sim no)
-		(at 177.8 91.948 0)
+		(at 226.06 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -36,7 +36,27 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 92.71) (xy 90.17 92.71)
+			(xy 157.48 73.66) (xy 191.77 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0396dbac-38e6-4f65-a171-52dc9368f330")
+	)
+	(wire
+		(pts
+			(xy 191.77 73.66) (xy 191.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "123e5729-af5d-4016-976d-86160aeb26b4")
+	)
+	(wire
+		(pts
+			(xy 107.95 104.14) (xy 130.81 104.14)
 		)
 		(stroke
 			(width 0)
@@ -44,19 +64,29 @@
 		)
 		(uuid "3ade4d2d-b6ad-460d-a290-7fb52e80d0a9")
 	)
-	(polyline
+	(wire
 		(pts
-			(xy 152.4 91.44) (xy 167.64 91.44)
+			(xy 100.33 74.93) (xy 129.54 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4e09ac89-9c47-424a-beb2-66cdf398019e")
+		(uuid "436d0fce-a436-43bb-aa46-86a3a5530e55")
+	)
+	(polyline
+		(pts
+			(xy 201.93 99.06) (xy 215.9 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "484c289e-5276-4d9c-b247-d1f8d0f3c63c")
 	)
 	(wire
 		(pts
-			(xy 114.3 90.17) (xy 139.7 90.17)
+			(xy 154.94 101.6) (xy 180.34 101.6)
 		)
 		(stroke
 			(width 0)
@@ -66,7 +96,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 87.63) (xy 139.7 87.63)
+			(xy 154.94 99.06) (xy 180.34 99.06)
 		)
 		(stroke
 			(width 0)
@@ -76,7 +106,17 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 87.63) (xy 90.17 87.63)
+			(xy 97.79 92.71) (xy 97.79 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8080088c-6974-4106-8196-ff605a3da85f")
+	)
+	(wire
+		(pts
+			(xy 107.95 99.06) (xy 130.81 99.06)
 		)
 		(stroke
 			(width 0)
@@ -86,7 +126,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 104.14) (xy 49.53 104.14)
+			(xy 81.28 110.49) (xy 90.17 110.49)
 		)
 		(stroke
 			(width 0)
@@ -96,7 +136,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 106.68) (xy 49.53 106.68)
+			(xy 81.28 113.03) (xy 90.17 113.03)
 		)
 		(stroke
 			(width 0)
@@ -106,7 +146,17 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 92.71) (xy 139.7 92.71)
+			(xy 97.79 72.39) (xy 129.54 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8247cb2-8500-4c21-ae13-5110797449a1")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 180.34 104.14)
 		)
 		(stroke
 			(width 0)
@@ -116,7 +166,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 95.25) (xy 139.7 95.25)
+			(xy 154.94 106.68) (xy 180.34 106.68)
 		)
 		(stroke
 			(width 0)
@@ -126,7 +176,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 95.25) (xy 90.17 95.25)
+			(xy 107.95 106.68) (xy 130.81 106.68)
 		)
 		(stroke
 			(width 0)
@@ -136,7 +186,17 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 90.17) (xy 90.17 90.17)
+			(xy 100.33 92.71) (xy 100.33 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3671c20-598c-4370-907d-41dbdc4503c0")
+	)
+	(wire
+		(pts
+			(xy 107.95 101.6) (xy 130.81 101.6)
 		)
 		(stroke
 			(width 0)
@@ -145,8 +205,8 @@
 		(uuid "fd198292-7fee-4cd8-bce9-fc9823d93695")
 	)
 	(sheet
-		(at 91.44 60.96)
-		(size 17.78 7.62)
+		(at 129.54 69.85)
+		(size 27.94 7.62)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -157,11 +217,11 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 0 255 255 0.1019607843)
 		)
 		(uuid "152e488a-5c59-4955-a770-fd5dc463781b")
 		(property "Sheetname" "VCA Driver"
-			(at 91.44 60.2484 0)
+			(at 129.54 69.1384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -172,7 +232,7 @@
 			)
 		)
 		(property "Sheetfile" "vca_driver.kicad_sch"
-			(at 91.44 69.1646 0)
+			(at 129.54 78.0546 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -181,6 +241,36 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "VCA+" passive
+			(at 129.54 72.39 180)
+			(uuid "f793806b-8480-4b0f-82e9-7971635b71fa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCA-" passive
+			(at 129.54 74.93 180)
+			(uuid "789185c5-7754-44fe-a2f4-19bc6aa151d2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DRV_CURR_Vref" input
+			(at 157.48 73.66 0)
+			(uuid "dfe59768-e6c0-43a3-94a0-fc7c5e31f7d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -192,7 +282,7 @@
 		)
 	)
 	(sheet
-		(at 27.94 102.87)
+		(at 68.58 109.22)
 		(size 12.7 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -208,7 +298,7 @@
 		)
 		(uuid "15680402-d9a3-4e18-a79a-80d2d5ffc55c")
 		(property "Sheetname" "Laser APC"
-			(at 27.94 102.1584 0)
+			(at 68.58 108.5084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -219,7 +309,7 @@
 			)
 		)
 		(property "Sheetfile" "laser_apc.kicad_sch"
-			(at 27.94 108.5346 0)
+			(at 68.58 114.8846 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -231,7 +321,7 @@
 			)
 		)
 		(pin "MD" input
-			(at 40.64 104.14 0)
+			(at 81.28 110.49 0)
 			(uuid "3ac8e039-52f7-48fe-bce5-5b75a65460c7")
 			(effects
 				(font
@@ -241,7 +331,7 @@
 			)
 		)
 		(pin "LD_DVD" output
-			(at 40.64 106.68 0)
+			(at 81.28 113.03 0)
 			(uuid "2475443f-7567-459a-a3dc-8938551ab03f")
 			(effects
 				(font
@@ -259,7 +349,7 @@
 		)
 	)
 	(sheet
-		(at 90.17 83.82)
+		(at 130.81 95.25)
 		(size 24.13 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -275,7 +365,7 @@
 		)
 		(uuid "1dc792cd-316d-4a98-a06d-e76af60f931f")
 		(property "Sheetname" "PDIC Pre-processing"
-			(at 90.17 83.1084 0)
+			(at 130.81 94.5384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -286,7 +376,7 @@
 			)
 		)
 		(property "Sheetfile" "pdic_preproc.kicad_sch"
-			(at 90.17 102.1846 0)
+			(at 130.81 113.6146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -297,7 +387,7 @@
 			)
 		)
 		(pin "d_raw" input
-			(at 90.17 95.25 180)
+			(at 130.81 106.68 180)
 			(uuid "1a39c74f-8f45-4a8a-8501-b6b2af7fb103")
 			(effects
 				(font
@@ -307,7 +397,7 @@
 			)
 		)
 		(pin "b_raw" input
-			(at 90.17 90.17 180)
+			(at 130.81 101.6 180)
 			(uuid "af0a7f93-31f1-4f55-b8a7-4cb49f224147")
 			(effects
 				(font
@@ -317,7 +407,7 @@
 			)
 		)
 		(pin "a_raw" input
-			(at 90.17 87.63 180)
+			(at 130.81 99.06 180)
 			(uuid "62260823-3da0-43f3-9af2-d5655b28d4fd")
 			(effects
 				(font
@@ -327,7 +417,7 @@
 			)
 		)
 		(pin "c_raw" input
-			(at 90.17 92.71 180)
+			(at 130.81 104.14 180)
 			(uuid "16dcbb55-1d31-40ad-bff6-603c93bcbfb1")
 			(effects
 				(font
@@ -337,7 +427,7 @@
 			)
 		)
 		(pin "a_digital" output
-			(at 114.3 87.63 0)
+			(at 154.94 99.06 0)
 			(uuid "803f3213-d418-436a-b8c3-021b2a80ed1d")
 			(effects
 				(font
@@ -347,7 +437,7 @@
 			)
 		)
 		(pin "d_digital" output
-			(at 114.3 95.25 0)
+			(at 154.94 106.68 0)
 			(uuid "7cfff4d7-992d-48d1-a0bb-0ed4d57826fd")
 			(effects
 				(font
@@ -357,7 +447,7 @@
 			)
 		)
 		(pin "c_digital" output
-			(at 114.3 92.71 0)
+			(at 154.94 104.14 0)
 			(uuid "79c660a7-bf33-4d2a-932f-a1dcb7eba250")
 			(effects
 				(font
@@ -367,7 +457,7 @@
 			)
 		)
 		(pin "b_digital" output
-			(at 114.3 90.17 0)
+			(at 154.94 101.6 0)
 			(uuid "0841b445-ef1b-4d0d-ba6f-9837a21e87b0")
 			(effects
 				(font
@@ -385,8 +475,8 @@
 		)
 	)
 	(sheet
-		(at 139.7 83.82)
-		(size 12.7 17.78)
+		(at 180.34 90.17)
+		(size 21.59 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -401,7 +491,7 @@
 		)
 		(uuid "609e7c1b-9183-4cd7-8dc2-8610036ea669")
 		(property "Sheetname" "MCU"
-			(at 139.7 83.1084 0)
+			(at 180.34 89.4584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -412,7 +502,7 @@
 			)
 		)
 		(property "Sheetfile" "mcu.kicad_sch"
-			(at 139.7 102.1846 0)
+			(at 180.34 113.6146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -423,7 +513,7 @@
 			)
 		)
 		(pin "a" input
-			(at 139.7 87.63 180)
+			(at 180.34 99.06 180)
 			(uuid "30e81b50-8e2c-450a-b83f-62237a0466c2")
 			(effects
 				(font
@@ -433,7 +523,7 @@
 			)
 		)
 		(pin "b" input
-			(at 139.7 90.17 180)
+			(at 180.34 101.6 180)
 			(uuid "67d2207c-8cb0-40a0-a638-e6763cfee6f4")
 			(effects
 				(font
@@ -443,7 +533,7 @@
 			)
 		)
 		(pin "c" input
-			(at 139.7 92.71 180)
+			(at 180.34 104.14 180)
 			(uuid "0699d890-dc62-4054-8c25-05cbcb9ade23")
 			(effects
 				(font
@@ -453,13 +543,23 @@
 			)
 		)
 		(pin "d" input
-			(at 139.7 95.25 180)
+			(at 180.34 106.68 180)
 			(uuid "eb5440d8-d1aa-4d37-9a57-87f1e2197b6c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "VCA_Vref" output
+			(at 191.77 90.17 90)
+			(uuid "0a532258-fb97-4368-9005-f4a99570500c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -471,8 +571,8 @@
 		)
 	)
 	(sheet
-		(at 49.53 81.28)
-		(size 17.78 26.67)
+		(at 90.17 92.71)
+		(size 17.78 21.59)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -487,7 +587,7 @@
 		)
 		(uuid "ee82208d-d5c1-459a-a4b7-fe805623b0b7")
 		(property "Sheetname" "OPU"
-			(at 49.53 80.5684 0)
+			(at 90.17 91.9984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -498,7 +598,7 @@
 			)
 		)
 		(property "Sheetfile" "opu.kicad_sch"
-			(at 49.53 108.5346 0)
+			(at 90.17 114.8846 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -510,7 +610,7 @@
 			)
 		)
 		(pin "DVD_LD_PWR" input
-			(at 49.53 106.68 180)
+			(at 90.17 113.03 180)
 			(uuid "8c35b374-7ad0-4cb0-a290-d0509242a136")
 			(effects
 				(font
@@ -520,7 +620,7 @@
 			)
 		)
 		(pin "MD" output
-			(at 49.53 104.14 180)
+			(at 90.17 110.49 180)
 			(uuid "27bfb4f8-6465-455c-b0f9-07045174c7b9")
 			(effects
 				(font
@@ -530,7 +630,7 @@
 			)
 		)
 		(pin "a" output
-			(at 67.31 87.63 0)
+			(at 107.95 99.06 0)
 			(uuid "69aee0b5-954c-494a-9474-30aa27a8b6c2")
 			(effects
 				(font
@@ -540,7 +640,7 @@
 			)
 		)
 		(pin "b" output
-			(at 67.31 90.17 0)
+			(at 107.95 101.6 0)
 			(uuid "8062b60b-f4ee-4a32-9668-799efbdd2c07")
 			(effects
 				(font
@@ -550,7 +650,7 @@
 			)
 		)
 		(pin "c" output
-			(at 67.31 92.71 0)
+			(at 107.95 104.14 0)
 			(uuid "a3d44cfa-085f-437f-874d-4076cf45aff8")
 			(effects
 				(font
@@ -559,8 +659,8 @@
 				(justify right)
 			)
 		)
-		(pin "F-" input
-			(at 59.69 81.28 90)
+		(pin "F-" passive
+			(at 100.33 92.71 90)
 			(uuid "19a9ddb8-eb76-4786-a61a-26c6729bf8a4")
 			(effects
 				(font
@@ -569,8 +669,8 @@
 				(justify right)
 			)
 		)
-		(pin "F+" input
-			(at 56.6735 81.28 90)
+		(pin "F+" passive
+			(at 97.79 92.71 90)
 			(uuid "a2b771f2-4609-4082-9ee4-f6e460827d88")
 			(effects
 				(font
@@ -580,7 +680,7 @@
 			)
 		)
 		(pin "d" output
-			(at 67.31 95.25 0)
+			(at 107.95 106.68 0)
 			(uuid "3709a472-be14-470c-a9b9-a8c312c23037")
 			(effects
 				(font

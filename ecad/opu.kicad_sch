@@ -2514,7 +2514,7 @@
 		(uuid "7d359c94-5a6f-4a42-ab86-0cbd1a21e89f")
 	)
 	(hierarchical_label "F-"
-		(shape input)
+		(shape passive)
 		(at 163.83 71.12 0)
 		(effects
 			(font
@@ -2536,7 +2536,7 @@
 		(uuid "bea639df-62bf-4f3b-a608-0c3d84578d9c")
 	)
 	(hierarchical_label "F+"
-		(shape input)
+		(shape passive)
 		(at 163.83 73.66 0)
 		(effects
 			(font
