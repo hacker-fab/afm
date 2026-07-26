@@ -1914,16 +1914,16 @@
 		)
 	)
 	(rectangle
-		(start 168.91 91.44)
-		(end 184.15 96.52)
+		(start 179.07 91.44)
+		(end 194.31 96.52)
 		(stroke
 			(width 0)
-			(type solid)
+			(type default)
 		)
 		(fill
 			(type none)
 		)
-		(uuid "7fe1ba20-d693-422a-b992-88df42c37689")
+		(uuid "4c00cd7c-1d1e-4741-992d-d7d040452aa2")
 	)
 	(text "VSHUNT = 0 at rest; +Z actuation\n\n1. MCU provides current setpoint; I_set = Vref / R_shunt for +Z actuation.\n2. Vref - VSHUNT > GND => op-amp drives output HIGH.\n3. HIGH => NPN conducts, PNP open; VDD -> through VCA -> GND;\n4. VSHUNT = I*R_Shunt updates; op-amp output adjusted till Vref ~= VSHUNT\n\nFor -Z actuation;\n1. MCU Vref < 0; Vref - VSHUNT < 0 => op-amp outut driven LOW.\n2. LOW => PNP conducts, NPN open; GND -> through VCA -> -VDD\n3. VSHUNT = I*R_Shunt updates; op-amp output adjusted till Vref ~= VSHUNT\n"
 		(exclude_from_sim no)
@@ -1953,10 +1953,28 @@
 		(uuid "04751663-061b-430e-8f2b-da621195ad5e")
 	)
 	(junction
+		(at 173.99 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "050f4661-78aa-47e7-927d-96bb3c3aa302")
+	)
+	(junction
 		(at 100.33 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2da2d5ed-3d0d-4d24-ab8d-11b039d2f327")
+	)
+	(junction
+		(at 157.48 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "490f051e-f87e-473f-9bc7-2447c9c6ffa4")
+	)
+	(junction
+		(at 157.48 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "59864873-be31-486b-8817-11ba8d2c5d70")
 	)
 	(junction
 		(at 147.32 59.69)
@@ -1965,13 +1983,13 @@
 		(uuid "603143e5-9415-4d83-8102-657a98f29de6")
 	)
 	(junction
-		(at 157.48 93.98)
+		(at 167.64 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6dff9e62-7104-48ef-a0d2-a58250a2b16d")
+		(uuid "9b3147fc-122f-4896-8e80-89b170e4ba4e")
 	)
 	(junction
-		(at 193.04 113.03)
+		(at 203.2 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9b7901b3-12d6-4e59-9858-a887982c9598")
@@ -1993,6 +2011,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4da94b0-eab8-471e-aaad-e3b6a9b1738b")
+	)
+	(junction
+		(at 157.48 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d992c44c-eb2d-49a3-94c3-1455ec678ffd")
 	)
 	(junction
 		(at 109.22 124.46)
@@ -2076,7 +2100,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 107.95) (xy 189.23 107.95)
+			(xy 200.66 107.95) (xy 199.39 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2136,6 +2160,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 93.98) (xy 179.07 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36add47f-77ee-47a8-9fd7-3e2df29f76b9")
+	)
+	(wire
+		(pts
 			(xy 109.22 59.69) (xy 109.22 86.36)
 		)
 		(stroke
@@ -2146,7 +2180,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 93.98) (xy 193.04 93.98)
+			(xy 194.31 93.98) (xy 203.2 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2156,7 +2190,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 102.87) (xy 190.5 102.87)
+			(xy 189.23 102.87) (xy 200.66 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2216,6 +2250,26 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 73.66) (xy 167.64 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "594940b9-7221-41d9-94dc-f1948ca9b62f")
+	)
+	(wire
+		(pts
+			(xy 167.64 81.28) (xy 167.64 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a310272-d7fb-4c86-bb2e-b2e1a5bef6c0")
+	)
+	(wire
+		(pts
 			(xy 109.22 59.69) (xy 114.3 59.69)
 		)
 		(stroke
@@ -2236,7 +2290,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 110.49) (xy 193.04 113.03)
+			(xy 203.2 110.49) (xy 203.2 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2286,7 +2340,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 113.03) (xy 193.04 113.03)
+			(xy 199.39 113.03) (xy 203.2 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2386,7 +2440,7 @@
 	)
 	(wire
 		(pts
-			(xy 189.23 107.95) (xy 189.23 113.03)
+			(xy 199.39 107.95) (xy 199.39 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2406,7 +2460,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 93.98) (xy 168.91 93.98)
+			(xy 157.48 93.98) (xy 167.64 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2436,7 +2490,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 113.03) (xy 193.04 115.57)
+			(xy 203.2 113.03) (xy 203.2 115.57)
 		)
 		(stroke
 			(width 0)
@@ -2446,13 +2500,33 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 100.33) (xy 193.04 93.98)
+			(xy 203.2 100.33) (xy 203.2 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ad2678dc-e05f-4b02-8467-8bb268eec4f0")
+	)
+	(wire
+		(pts
+			(xy 173.99 93.98) (xy 173.99 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad76f22b-4e5e-4a00-876c-ab6c39f6bbce")
+	)
+	(wire
+		(pts
+			(xy 167.64 93.98) (xy 173.99 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be669ca9-cbc0-4f3f-b81e-64318fcbbe4e")
 	)
 	(wire
 		(pts
@@ -2463,6 +2537,16 @@
 			(type default)
 		)
 		(uuid "c1fa7ac4-d79b-4d68-bac8-d832505c6cbe")
+	)
+	(wire
+		(pts
+			(xy 157.48 59.69) (xy 167.64 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8d57c1a-5b73-4e69-a58a-c30c8d7dfce7")
 	)
 	(wire
 		(pts
@@ -2483,6 +2567,16 @@
 			(type default)
 		)
 		(uuid "cf62f78b-db2b-4637-843f-f72a420c2f79")
+	)
+	(wire
+		(pts
+			(xy 173.99 124.46) (xy 157.48 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d06d7ab8-4bdd-410d-bde5-4c9c8cea0cce")
 	)
 	(wire
 		(pts
@@ -2564,8 +2658,18 @@
 		)
 		(uuid "f7a6cae4-9755-418f-8457-ab02b0939262")
 	)
+	(wire
+		(pts
+			(xy 173.99 114.3) (xy 173.99 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd4e6c17-24e7-447b-8fed-7dfd5a6fb72d")
+	)
 	(label "VSHUNT"
-		(at 179.07 102.87 0)
+		(at 189.23 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2597,7 +2701,7 @@
 	)
 	(hierarchical_label "VCA-"
 		(shape passive)
-		(at 184.15 93.98 180)
+		(at 194.31 93.98 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2608,7 +2712,7 @@
 	)
 	(hierarchical_label "VCA+"
 		(shape passive)
-		(at 168.91 93.98 0)
+		(at 179.07 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2616,6 +2720,90 @@
 			(justify left)
 		)
 		(uuid "9cf646c3-572a-464c-8c83-e4a098683738")
+	)
+	(symbol
+		(lib_id "Diode:BAT54W")
+		(at 173.99 110.49 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "08e28e06-0636-47aa-b15c-7bf34190a3e5")
+		(property "Reference" "D4"
+			(at 176.53 108.9024 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BAT54W"
+			(at 176.53 111.4424 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+			(at 169.545 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
+			(at 173.99 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky barrier diode, SOT-323"
+			(at 173.99 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c58d4737-36e5-4ed2-8b0f-8c16724ef26c")
+		)
+		(pin "2"
+			(uuid "b9258dd8-b677-496a-9f64-93da34827cf4")
+		)
+		(pin "3"
+			(uuid "8ef46fac-4a3d-4bd8-bcf6-db7a5031e6e3")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/152e488a-5c59-4955-a770-fd5dc463781b"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -3016,7 +3204,7 @@
 	)
 	(symbol
 		(lib_id "Diode:BAT54W")
-		(at 179.07 77.47 270)
+		(at 167.64 77.47 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3027,7 +3215,7 @@
 		(fields_autoplaced yes)
 		(uuid "2c321bf9-672c-4607-819f-08e63c4c8110")
 		(property "Reference" "D2"
-			(at 181.61 75.8824 90)
+			(at 170.18 75.8824 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3038,7 +3226,7 @@
 			)
 		)
 		(property "Value" "BAT54W"
-			(at 181.61 78.4224 90)
+			(at 170.18 78.4224 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3049,7 +3237,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
-			(at 174.625 77.47 0)
+			(at 163.195 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3060,7 +3248,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf"
-			(at 179.07 77.47 0)
+			(at 167.64 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3071,7 +3259,7 @@
 			)
 		)
 		(property "Description" "Schottky barrier diode, SOT-323"
-			(at 179.07 77.47 0)
+			(at 167.64 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4171,7 +4359,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193.04 115.57 0)
+		(at 203.2 115.57 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4181,7 +4369,7 @@
 		(dnp no)
 		(uuid "acdcc2f5-5d75-4b6d-a9f5-9a406abd13e8")
 		(property "Reference" "#PWR014"
-			(at 193.04 121.92 0)
+			(at 203.2 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4192,7 +4380,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 193.04 119.38 0)
+			(at 203.2 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4202,7 +4390,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 115.57 0)
+			(at 203.2 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4213,7 +4401,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 115.57 0)
+			(at 203.2 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4224,7 +4412,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 193.04 115.57 0)
+			(at 203.2 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4256,10 +4444,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b8ddb908-46c8-4b70-a322-032e878b64ff")
 		(property "Reference" "Q4"
-			(at 160.02 81.2799 0)
+			(at 158.75 80.772 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4270,7 +4457,7 @@
 			)
 		)
 		(property "Value" "BD139"
-			(at 160.02 83.8199 0)
+			(at 158.75 84.328 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4648,7 +4835,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Shunt_US")
-		(at 193.04 105.41 0)
+		(at 203.2 105.41 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -4659,7 +4846,7 @@
 		(dnp no)
 		(uuid "df01d179-41b0-4e20-8cfd-286d2392a2d2")
 		(property "Reference" "R8"
-			(at 195.58 104.1399 0)
+			(at 205.74 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4670,7 +4857,7 @@
 			)
 		)
 		(property "Value" "1R"
-			(at 195.58 106.6799 0)
+			(at 205.74 106.6799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4681,7 +4868,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.818 105.41 90)
+			(at 204.978 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4692,7 +4879,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 105.41 0)
+			(at 203.2 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4703,7 +4890,7 @@
 			)
 		)
 		(property "Description" "Shunt resistor with Kelvin connections, US symbol"
-			(at 193.04 105.41 0)
+			(at 203.2 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4815,8 +5002,8 @@
 		)
 	)
 	(group ""
-		(uuid "5ad5dfe6-fc72-4d67-aab2-6f7308086336")
-		(members "7da5fe76-c194-4e79-b321-c29380be2a89" "7fe1ba20-d693-422a-b992-88df42c37689"
+		(uuid "10a07dcc-f718-4880-bc5f-7460330f1985")
+		(members "4c00cd7c-1d1e-4741-992d-d7d040452aa2" "7da5fe76-c194-4e79-b321-c29380be2a89"
 			"9cf646c3-572a-464c-8c83-e4a098683738"
 		)
 	)
