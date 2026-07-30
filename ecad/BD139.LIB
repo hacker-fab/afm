@@ -1,0 +1,68 @@
+*****************************************************************
+******STMicroelectronics MOSFET, IGBT and Bipolar Library *******
+*****************************************************************
+*																*
+* Models provided by STMicroelectronics are not guaranteed to   *
+* fully represent all the specifications and operating			*
+* characteristics of the product behavior that they reproduce.  *
+* The model describes the characteristics of a typical device.  *
+* In all cases, the current product data sheet contains all     *
+* information to be used like final design guidelines and the   *
+* only actual performance specification.                        *
+* Altough models can be a useful tool in evaluating device      *
+* performance, they cannot model exact device performance under *
+* all conditions.												*
+* STMicroelectronics therefore does not assume any              *
+* responsibility arising from their use.                        *
+* STMicroelectronics reserves the right to change models        *
+* without prior notice.                                         *
+*                                                               *
+*****************************************************************
+ 
+.SUBCKT BD139 1 2 3
+
+RB 2 5 1E-06
+RC 1 4 1E-06
+RE 3 6 1E-06
+
+Q1 4 5 6 Q
+ 
+.MODEL Q NPN
++Is    = 0.271E-16
++Bf    = 204.072
++Vaf   = 158.022
++Ikf   = 5.018
++Ise   = 0.137E-17
++Ne    = 1.712
++Br    = 1.127
++Var   = 10.749
++Ikr   = 0.435
++Isc   = 0.128E-17
++Nc    = 1.046
++Nk    = 0.207
++Rb    = 0.571
++Rbm   = 0.101E-02
++Nf    = 0.982
++Re    = 0.259E-01
++Rc    = 0.413E-01
++Qco   = 0.873E-10
++Rco   = 4.999
++Vo    = 6.291
++Gamma = 0.704E-10
++Cjc   = 0.361E-10
++Vjc   = 0.776
++Mjc   = 0.409
++Cje   = 0.102E-10
++Vje   = 0.745
++Mje   = 0.404
++Fc    = 0.503
++Tr    = 0.118E-06
++Tf    = 0.296E-08
++Itf   = 0.229
++Vtf   = 23.728
++Xtf   = 0.569
+ 
+.ENDS BD139
+ 
+* END OF MODELLING
+
