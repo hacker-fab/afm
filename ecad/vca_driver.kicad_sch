@@ -2889,7 +2889,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "4.7nF"
 			(at 121.412 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3448,7 +3448,7 @@
 				)
 			)
 		)
-		(property "Value" "500K"
+		(property "Value" "3M"
 			(at 119.38 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
