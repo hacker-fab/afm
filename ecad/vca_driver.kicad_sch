@@ -3737,7 +3737,6 @@
 	(symbol
 		(lib_id "Device:R_US")
 		(at 152.4 96.52 0)
-		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3745,7 +3744,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "438b7a41-155f-4320-b783-6eb6a1614734")
 		(property "Reference" "R20"
 			(at 149.86 95.2499 0)
@@ -3755,10 +3753,10 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "2R"
+		(property "Value" "3K"
 			(at 149.86 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3766,11 +3764,11 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 151.384 96.774 90)
+			(at 153.416 96.774 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4026,7 +4024,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2R"
+		(property "Value" "3.3K"
 			(at 151.13 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
