@@ -712,7 +712,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "C17-19,R12,R19-24,Q5,U1,#PWR28-36",
+    "used_designators": "C17-19,R12,R19-28,Q5,U1,#PWR28-36",
     "variants": []
   },
   "sheets": [
