@@ -1956,6 +1956,16 @@
 		)
 		(uuid "c708680e-84af-4ee8-8598-f21a31e48d0a")
 	)
+	(text "U3's part B in MCU/DAC page."
+		(exclude_from_sim no)
+		(at 160.274 195.072 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "eb3a1fe8-928b-471a-86dc-5cc8355aa3c0")
+	)
 	(junction
 		(at 109.22 57.15)
 		(diameter 0)
@@ -2093,18 +2103,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f337dc77-f8a8-4441-a9f2-46588e76ebd0")
-	)
-	(no_connect
-		(at 266.7 31.75)
-		(uuid "06374e25-9814-4303-a328-52709e3e6bd4")
-	)
-	(no_connect
-		(at 266.7 26.67)
-		(uuid "0b1d4978-1b2d-4bd9-a33b-9cbe30bec71c")
-	)
-	(no_connect
-		(at 281.94 29.21)
-		(uuid "79c9590c-2911-4b40-9335-068a8f555c3a")
 	)
 	(wire
 		(pts
@@ -4819,104 +4817,6 @@
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/152e488a-5c59-4955-a770-fd5dc463781b"
 					(reference "C9")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:OPA2277")
-		(at 274.32 29.21 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a8c85f60-cc2d-402a-84eb-6f59a8d56c24")
-		(property "Reference" "U3"
-			(at 274.32 19.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA2277"
-			(at 274.32 21.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2277.pdf"
-			(at 274.32 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual High Precision Operational Amplifiers, DIP-8/SOIC-8"
-			(at 274.32 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "8"
-			(uuid "16eca089-9e9d-465a-8366-dc68cdf91409")
-		)
-		(pin "4"
-			(uuid "cc4f4e7f-c26e-4447-a9eb-888d67c4ffb5")
-		)
-		(pin "6"
-			(uuid "bcfb9096-fe6a-454d-9205-ac62d27c2ea7")
-		)
-		(pin "5"
-			(uuid "68fc3673-2037-42ae-a58c-42468ae0fc9a")
-		)
-		(pin "7"
-			(uuid "61088f08-f64c-4ce5-a12e-35fdfafdd4cd")
-		)
-		(pin "3"
-			(uuid "a6072dc9-2d01-4b0c-bc9e-dc9af2897ae4")
-		)
-		(pin "1"
-			(uuid "b7b6831e-c01f-4cd8-9ab1-db8e9417abec")
-		)
-		(pin "2"
-			(uuid "1ada8e20-e08d-4fb7-9a93-1f887b42dcec")
-		)
-		(instances
-			(project "afm"
-				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/152e488a-5c59-4955-a770-fd5dc463781b"
-					(reference "U3")
-					(unit 2)
 				)
 			)
 		)
