@@ -3047,7 +3047,7 @@
 		)
 		(uuid "be550654-f83c-4464-be32-00e3b23406c4")
 	)
-	(hierarchical_label "DAC_MIDPT"
+	(hierarchical_label "DAC_MIDPT_Vref"
 		(shape input)
 		(at 40.64 86.36 180)
 		(effects
@@ -3058,7 +3058,7 @@
 		)
 		(uuid "5efd37fe-e0a8-45d3-aaa2-c98f82078771")
 	)
-	(hierarchical_label "DRV_CURR_Vref"
+	(hierarchical_label "VCA_DRV"
 		(shape input)
 		(at 40.64 91.44 180)
 		(effects

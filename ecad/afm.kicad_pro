@@ -712,7 +712,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "C17-19,R12,R19-28,Q5,U1,#PWR28-36",
+    "used_designators": "C7,C14,C16-21,R12,R16,R18-28,Q5,U1,U5-6,#PWR15-18,#PWR25,#PWR27-37",
     "variants": []
   },
   "sheets": [
@@ -729,18 +729,6 @@
       "PDIC Pre-processing"
     ],
     [
-      "14f41077-8ee4-46b4-8699-6ceb5aa1d801",
-      "ADCs1"
-    ],
-    [
-      "f8f57409-0016-43e7-bb83-f803cfb7ae14",
-      "Amplifier Stages"
-    ],
-    [
-      "bf343947-7a37-4d89-a40c-d0985c181e57",
-      "Amplifier Stages1"
-    ],
-    [
       "15680402-d9a3-4e18-a79a-80d2d5ffc55c",
       "Laser APC"
     ],
@@ -751,10 +739,6 @@
     [
       "152e488a-5c59-4955-a770-fd5dc463781b",
       "VCA Driver"
-    ],
-    [
-      "a48bc72a-5d05-40b5-811b-edae68bdb18b",
-      "ADCs"
     ]
   ],
   "text_variables": {},

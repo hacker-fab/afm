@@ -10,16 +10,6 @@
 		(comment 1 "Yash Karthik")
 	)
 	(lib_symbols)
-	(text "ADS1256?"
-		(exclude_from_sim no)
-		(at 71.374 101.346 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "c94f45fd-2414-4cc8-83d0-9ae213577ea1")
-	)
 	(hierarchical_label "Q2_digital"
 		(shape output)
 		(at 95.25 86.36 0)

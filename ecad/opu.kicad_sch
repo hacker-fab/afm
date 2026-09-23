@@ -3205,7 +3205,7 @@
 			)
 		)
 		(property "Value" "GND_PD"
-			(at 141.732 105.918 0)
+			(at 141.732 106.426 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

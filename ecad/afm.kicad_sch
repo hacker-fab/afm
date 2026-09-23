@@ -303,9 +303,9 @@
 				(justify left)
 			)
 		)
-		(pin "DRV_CURR_Vref" input
+		(pin "VCA_DRV" input
 			(at 166.37 71.12 0)
-			(uuid "dfe59768-e6c0-43a3-94a0-fc7c5e31f7d7")
+			(uuid "f8db223c-f94f-4034-bf99-3e5196cd7b3b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -313,9 +313,9 @@
 				(justify right)
 			)
 		)
-		(pin "DAC_MIDPT" input
+		(pin "DAC_MIDPT_Vref" input
 			(at 166.37 68.58 0)
-			(uuid "8d76dff8-ea03-460b-b2fe-1725dd1edc42")
+			(uuid "49a4e658-8233-44bf-9147-916f086a1adc")
 			(effects
 				(font
 					(size 1.27 1.27)

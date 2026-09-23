@@ -385,6 +385,278 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Amplifier_Operational:OPA2277"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "OPA2277"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2277.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Dual High Precision Operational Amplifiers, DIP-8/SOIC-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "OPA2277_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA2277_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA2277_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -869,6 +1141,260 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:-5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "-5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"-5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "-5V_0_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "-5V_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy 0.762 1.27) (xy 0 2.54) (xy -0.762 1.27) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -996,16 +1522,6 @@
 		)
 		(uuid "2d690987-e95e-4d8e-8946-4191048e8d4e")
 	)
-	(text "opa2277 here"
-		(exclude_from_sim no)
-		(at 174.244 140.462 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5e351f50-7051-47f6-acaf-1da93de59f1f")
-	)
 	(text "U3A is conn. to +5V, -5V in the VCA driver page"
 		(exclude_from_sim no)
 		(at 192.024 157.48 0)
@@ -1031,6 +1547,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4c8867c3-bcba-4ea9-b19f-9c71d82a9d71")
+	)
+	(junction
+		(at 243.84 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5010c8f2-25f8-4fc5-a5ef-a93cedfe6a16")
+	)
+	(junction
+		(at 243.84 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ad39416-4d9b-4cb3-abe3-61e7d4ff348a")
 	)
 	(junction
 		(at 156.21 64.77)
@@ -1067,6 +1595,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f253ba86-d338-4217-8d7a-e9317686c80e")
+	)
+	(no_connect
+		(at 275.59 139.7)
+		(uuid "6cb31d2b-1481-440f-b491-93eb304e5314")
+	)
+	(no_connect
+		(at 260.35 137.16)
+		(uuid "c11ed3f9-4d40-49b0-a43e-fbbcba32bde0")
+	)
+	(no_connect
+		(at 260.35 142.24)
+		(uuid "fd71ab7b-1c73-4572-ad66-2a009a21fd23")
 	)
 	(wire
 		(pts
@@ -1130,6 +1670,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 124.46) (xy 236.22 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43750ad3-2d66-4efd-bad8-16f630dd9e78")
+	)
+	(wire
+		(pts
 			(xy 157.48 147.32) (xy 157.48 148.59)
 		)
 		(stroke
@@ -1137,6 +1687,16 @@
 			(type default)
 		)
 		(uuid "458a2157-46c0-43d1-aa4c-3d26e0fa2d77")
+	)
+	(wire
+		(pts
+			(xy 241.3 151.13) (xy 243.84 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46ad4a8e-9a73-4d87-92fc-1c528956ea58")
 	)
 	(polyline
 		(pts
@@ -1160,6 +1720,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 124.46) (xy 243.84 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5426c4dc-91d7-44d2-ac9d-68b25013f4c2")
+	)
+	(wire
+		(pts
 			(xy 157.48 139.7) (xy 157.48 137.16)
 		)
 		(stroke
@@ -1167,6 +1737,16 @@
 			(type default)
 		)
 		(uuid "5453b10b-a868-4529-a018-46fb6713147f")
+	)
+	(wire
+		(pts
+			(xy 241.3 124.46) (xy 243.84 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bd54202-c7eb-4389-87f8-ff77ef7816ab")
 	)
 	(wire
 		(pts
@@ -1227,6 +1807,16 @@
 			(type default)
 		)
 		(uuid "80657348-9e1d-48b6-ac78-6ff782712c9b")
+	)
+	(wire
+		(pts
+			(xy 234.95 151.13) (xy 236.22 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81f2ec61-1b8a-42cb-b50c-d45e8b403f69")
 	)
 	(wire
 		(pts
@@ -1320,6 +1910,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 151.13) (xy 243.84 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c60a2a87-af57-42b5-83b2-354fe82881ba")
+	)
+	(wire
+		(pts
 			(xy 167.64 142.24) (xy 166.37 142.24)
 		)
 		(stroke
@@ -1327,6 +1927,16 @@
 			(type default)
 		)
 		(uuid "c68811a5-b66b-48d1-9542-54a3156ba66b")
+	)
+	(wire
+		(pts
+			(xy 234.95 151.13) (xy 234.95 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7e99729-4875-441d-86f8-0f265d724637")
 	)
 	(wire
 		(pts
@@ -1350,6 +1960,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 124.46) (xy 234.95 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc8c4d04-315d-42ff-b559-49cb984d1edc")
+	)
+	(wire
+		(pts
 			(xy 190.5 86.36) (xy 190.5 85.09)
 		)
 		(stroke
@@ -1367,6 +1987,16 @@
 			(type default)
 		)
 		(uuid "d25ec423-1682-4272-ae48-452d993052b8")
+	)
+	(wire
+		(pts
+			(xy 243.84 147.32) (xy 243.84 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db85db88-d32d-449a-8262-dfd3dd24037b")
 	)
 	(wire
 		(pts
@@ -1447,6 +2077,16 @@
 			(type default)
 		)
 		(uuid "fc121b9c-d9ab-4811-99e5-0d5c945e915b")
+	)
+	(wire
+		(pts
+			(xy 243.84 120.65) (xy 243.84 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc3d8786-0907-4bdd-aabf-5c348b83f40d")
 	)
 	(wire
 		(pts
@@ -1578,6 +2218,84 @@
 		(uuid "f1789c76-b84f-4652-85dc-7de4161c9c26")
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 234.95 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "038bff94-8cfc-41c1-86bc-5e6b443224e8")
+		(property "Reference" "#PWR015"
+			(at 234.95 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 234.95 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1fa84a16-a8e6-402f-8ed8-dc1c78c2214a")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 196.85 139.7 90)
 		(unit 1)
@@ -1651,6 +2369,84 @@
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
 					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 234.95 154.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f1184eb-bd0a-4872-b027-7b179cacc786")
+		(property "Reference" "#PWR017"
+			(at 234.95 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 234.95 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6dbb2c46-5420-49f5-ae6f-f0161b1bcd37")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -2213,6 +3009,104 @@
 		)
 	)
 	(symbol
+		(lib_id "Amplifier_Operational:OPA2277")
+		(at 267.97 139.7 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63dcb9b1-6f58-4c3e-ac9b-f952ce6e984d")
+		(property "Reference" "U6"
+			(at 267.97 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2277"
+			(at 267.97 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 267.97 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2277.pdf"
+			(at 267.97 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual High Precision Operational Amplifiers, DIP-8/SOIC-8"
+			(at 267.97 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "843a069c-e5c7-45da-9320-ebcf8822b184")
+		)
+		(pin "1"
+			(uuid "e8b5c46d-2d99-4507-8155-94c0ecccbd81")
+		)
+		(pin "8"
+			(uuid "1c964030-77e3-421b-8113-9880ea3ae0d4")
+		)
+		(pin "4"
+			(uuid "a198c916-824b-44fd-9bbf-d2f5d61abcdd")
+		)
+		(pin "7"
+			(uuid "a1352070-e9d3-4bc6-9fd1-d1f84bf33748")
+		)
+		(pin "6"
+			(uuid "7d78e9b9-6cc1-4063-939c-58ffbccc1ebd")
+		)
+		(pin "5"
+			(uuid "f083fcfb-bffc-4800-a589-aa86248e384a")
+		)
+		(pin "3"
+			(uuid "8769bd07-96a3-424f-bf43-5890e800bd25")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "U6")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 196.85 73.66 0)
 		(unit 1)
@@ -2284,6 +3178,264 @@
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
 					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-5V")
+		(at 243.84 158.75 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7f1b3c13-aeb1-42a9-be12-af8280567f42")
+		(property "Reference" "#PWR037"
+			(at 243.84 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "-5V"
+			(at 243.84 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.84 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"-5V\""
+			(at 243.84 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b054eabc-dca2-4833-8ab2-3d6bcb2d2ff8")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 238.76 151.13 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "81613a71-2456-482a-b210-c1ca4b11e3eb")
+		(property "Reference" "C21"
+			(at 236.728 148.082 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 236.474 154.432 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
+			(at 238.76 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 228.6 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7469fc34-6522-4926-b0c4-f1142d3d71e2")
+		)
+		(pin "1"
+			(uuid "6ce4c0cd-e547-4541-9ae8-5029ce0a28a7")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2277")
+		(at 175.26 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e1cc81b-f50c-44a6-b406-f8c70005bbbd")
+		(property "Reference" "U6"
+			(at 175.26 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA2277"
+			(at 175.26 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2277.pdf"
+			(at 175.26 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual High Precision Operational Amplifiers, DIP-8/SOIC-8"
+			(at 175.26 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "843a069c-e5c7-45da-9320-ebcf8822b185")
+		)
+		(pin "1"
+			(uuid "e8b5c46d-2d99-4507-8155-94c0ecccbd82")
+		)
+		(pin "8"
+			(uuid "1c964030-77e3-421b-8113-9880ea3ae0d5")
+		)
+		(pin "4"
+			(uuid "a198c916-824b-44fd-9bbf-d2f5d61abcde")
+		)
+		(pin "7"
+			(uuid "a1352070-e9d3-4bc6-9fd1-d1f84bf33749")
+		)
+		(pin "6"
+			(uuid "7d78e9b9-6cc1-4063-939c-58ffbccc1ebe")
+		)
+		(pin "5"
+			(uuid "f083fcfb-bffc-4800-a589-aa86248e384b")
+		)
+		(pin "3"
+			(uuid "8769bd07-96a3-424f-bf43-5890e800bd26")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -2649,6 +3801,188 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 238.76 124.46 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8c971de-29a6-4f06-9588-579cdd239388")
+		(property "Reference" "C20"
+			(at 236.728 121.412 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 236.474 127.762 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
+			(at 238.76 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 228.6 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6f91ffdd-f13a-48ce-b9ef-33b50230390e")
+		)
+		(pin "1"
+			(uuid "b96947dc-92d9-4b4a-b5fa-d744e7ef6ec3")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA2277")
+		(at 246.38 139.7 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d5614740-c42c-48e1-98d1-8d3a5d23077f")
+		(property "Reference" "U6"
+			(at 245.11 138.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OPA2277"
+			(at 245.11 140.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa2277.pdf"
+			(at 246.38 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual High Precision Operational Amplifiers, DIP-8/SOIC-8"
+			(at 246.38 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "843a069c-e5c7-45da-9320-ebcf8822b186")
+		)
+		(pin "1"
+			(uuid "e8b5c46d-2d99-4507-8155-94c0ecccbd83")
+		)
+		(pin "8"
+			(uuid "1c964030-77e3-421b-8113-9880ea3ae0d6")
+		)
+		(pin "4"
+			(uuid "a198c916-824b-44fd-9bbf-d2f5d61abcdf")
+		)
+		(pin "7"
+			(uuid "a1352070-e9d3-4bc6-9fd1-d1f84bf3374a")
+		)
+		(pin "6"
+			(uuid "7d78e9b9-6cc1-4063-939c-58ffbccc1ebf")
+		)
+		(pin "5"
+			(uuid "f083fcfb-bffc-4800-a589-aa86248e384c")
+		)
+		(pin "3"
+			(uuid "8769bd07-96a3-424f-bf43-5890e800bd27")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "U6")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 157.48 148.59 0)
 		(unit 1)
@@ -2721,6 +4055,84 @@
 			(project "afm"
 				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
 					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 243.84 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd0896da-2c88-4668-89cd-206831e8961b")
+		(property "Reference" "#PWR036"
+			(at 243.84 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 243.84 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.84 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 243.84 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "593d5b4a-c47f-4e6d-97c9-0d3c32f5efc8")
+		)
+		(instances
+			(project "afm"
+				(path "/62de9aa8-4539-4ecb-8acc-2c7a46b3005b/609e7c1b-9183-4cd7-8dc2-8610036ea669"
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
