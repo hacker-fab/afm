@@ -9,6 +9,8 @@ from main import (
     CSV_COLUMNS,
     TREND_CSV_COLUMNS,
     LiveFrame,
+    acquire_single,
+    acquire_stop,
     acquisition_wait_seconds,
     combine_channels,
     parse_data_block,
@@ -49,7 +51,7 @@ class WaveformBlockTests(unittest.TestCase):
 
 
 class ChannelMathTests(unittest.TestCase):
-    def test_requested_four_channel_expression(self):
+    def test_focus_error_is_a_plus_c_minus_b_minus_d(self):
         channels = {
             1: np.array([1.0, 2.0, 3.0]),
             2: np.array([10.0, 20.0, 30.0]),
@@ -58,7 +60,7 @@ class ChannelMathTests(unittest.TestCase):
         }
         np.testing.assert_array_equal(
             combine_channels(channels),
-            np.array([45.0, 63.0, 81.0]),
+            np.array([-45.0, -63.0, -81.0]),
         )
 
     def test_aligns_to_shortest_channel(self):
@@ -68,7 +70,7 @@ class ChannelMathTests(unittest.TestCase):
             3: np.array([4.0, 5.0, 6.0]),
             4: np.array([40.0, 50.0, 60.0]),
         }
-        np.testing.assert_array_equal(combine_channels(channels), np.array([45.0, 63.0]))
+        np.testing.assert_array_equal(combine_channels(channels), np.array([-45.0, -63.0]))
 
 
 class CsvLoggingTests(unittest.TestCase):
@@ -105,9 +107,9 @@ class CsvLoggingTests(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         self.assertEqual(rows[0]["frame"], "7")
         self.assertEqual(rows[0]["sample_index"], "0")
-        self.assertEqual(rows[0]["ch1_v"], "1.0")
-        self.assertEqual(rows[0]["ch4_v"], "40.0")
-        self.assertEqual(rows[0]["differential_v"], "45.0")
+        self.assertEqual(rows[0]["a_v"], "1.0")
+        self.assertEqual(rows[0]["d_v"], "40.0")
+        self.assertEqual(rows[0]["focus_error_v"], "45.0")
         self.assertEqual(rows[1]["time_s"], "0.0")
 
     def test_reduces_frame_to_one_settling_trend_row(self):
@@ -118,10 +120,10 @@ class CsvLoggingTests(unittest.TestCase):
         self.assertEqual(values["frame"], 7)
         self.assertEqual(values["elapsed_s"], 2.5)
         self.assertEqual(values["event"], "vca_on_100mA")
-        self.assertEqual(values["ch1_mean_v"], 1.5)
-        self.assertEqual(values["ch4_mean_v"], 45.0)
-        self.assertEqual(values["differential_mean_v"], 54.0)
-        self.assertEqual(values["differential_std_v"], 9.0)
+        self.assertEqual(values["a_mean_v"], 1.5)
+        self.assertEqual(values["d_mean_v"], 45.0)
+        self.assertEqual(values["focus_error_mean_v"], 54.0)
+        self.assertEqual(values["focus_error_std_v"], 9.0)
         self.assertEqual(values["total_mean_v"], 66.0)
         self.assertEqual(values["transferred_points"], 2)
         self.assertAlmostEqual(values["waveform_span_s"], 1e-6)
@@ -136,7 +138,43 @@ class CsvLoggingTests(unittest.TestCase):
         rows = list(csv.DictReader(io.StringIO(output.getvalue())))
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["event"], "vca_off")
-        self.assertEqual(rows[0]["differential_mean_v"], "54.0")
+        self.assertEqual(rows[0]["focus_error_mean_v"], "54.0")
+
+
+class FakeScope:
+    def __init__(self, trmd_replies):
+        self.written = []
+        self._replies = list(trmd_replies)
+        self._pending = b""
+
+    def write(self, command):
+        self.written.append(command)
+        if command == "TRMD?":
+            # The last reply repeats once the script is exhausted.
+            reply = self._replies.pop(0) if len(self._replies) > 1 else self._replies[0]
+            self._pending = f"TRMD {reply}".encode()
+
+    def read_raw(self):
+        return self._pending
+
+
+class AcquireTests(unittest.TestCase):
+    def test_stop_mode_runs_auto_then_stops(self):
+        scope = FakeScope(["AUTO", "STOP"])
+        acquire_stop(scope, run_s=0.0)
+        self.assertEqual(scope.written[:2], ["TRMD AUTO", "STOP"])
+        self.assertIn("TRMD?", scope.written)
+
+    def test_single_mode_waits_for_stop(self):
+        scope = FakeScope(["SINGLE", "SINGLE", "STOP"])
+        acquire_single(scope, timeout_s=5.0)
+        self.assertEqual(scope.written[0], "TRMD SINGLE")
+        self.assertNotIn("FRTR", scope.written)
+
+    def test_single_mode_explains_trigger_timeout(self):
+        scope = FakeScope(["SINGLE"])
+        with self.assertRaisesRegex(RuntimeError, "trigger never fired"):
+            acquire_single(scope, timeout_s=0.0)
 
 
 class AcquisitionTimingTests(unittest.TestCase):

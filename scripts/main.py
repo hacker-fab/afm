@@ -1,4 +1,4 @@
-"""Live four-channel differential viewer for a Siglent SDS1104X-U."""
+"""Live four-channel focus-error viewer for a Siglent SDS1104X-U."""
 
 from __future__ import annotations
 
@@ -9,9 +9,9 @@ import re
 import sys
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import numpy as np
 import numpy.typing as npt
@@ -59,11 +59,11 @@ CSV_COLUMNS = (
     "captured_at_utc",
     "sample_index",
     "time_s",
-    "ch1_v",
-    "ch2_v",
-    "ch3_v",
-    "ch4_v",
-    "differential_v",
+    "a_v",
+    "b_v",
+    "c_v",
+    "d_v",
+    "focus_error_v",
     "sample_rate_sa_s",
     "acquired_points",
     "transfer_spacing",
@@ -75,14 +75,14 @@ TREND_CSV_COLUMNS = (
     "captured_at_utc",
     "elapsed_s",
     "event",
-    "ch1_mean_v",
-    "ch2_mean_v",
-    "ch3_mean_v",
-    "ch4_mean_v",
-    "differential_mean_v",
-    "differential_std_v",
-    "differential_min_v",
-    "differential_max_v",
+    "a_mean_v",
+    "b_mean_v",
+    "c_mean_v",
+    "d_mean_v",
+    "focus_error_mean_v",
+    "focus_error_std_v",
+    "focus_error_min_v",
+    "focus_error_max_v",
     "total_mean_v",
     "sample_rate_sa_s",
     "acquired_points",
@@ -144,22 +144,87 @@ def response_value(response: str) -> str:
     return response.partition(" ")[2].strip()
 
 
+def _reply_prefix(command: str) -> str:
+    """Header a reply to ``command`` starts with, e.g. ``C1:VDIV`` or ``TRMD``."""
+    head = command.partition("?")[0].strip()
+    return "Siglent" if head == "*IDN" else head
+
+
 def query_text(scope: MessageBasedResource, command: str) -> str:
     # Avoid PyVISA's line-termination pending buffer. This firmware sometimes
     # makes a binary waveform ready just after an LF-terminated text response;
     # raw, USBTMC-message-bounded reads keep the two reply types synchronized.
-    scope.write(command)
-    response = scope.read_raw()
-    try:
-        return response.decode("ascii").strip()
-    except UnicodeDecodeError:
-        if b":WF " not in response[:24]:
-            raise
-        # A reply from an earlier asynchronous WF? can surface first and the
-        # scope drops this text query. Retry it after consuming that block.
-        time.sleep(0.05)
+    prefix = _reply_prefix(command).encode()
+    for attempt in range(3):
         scope.write(command)
-        return scope.read_raw().decode("ascii").strip()
+        response = scope.read_raw()
+        # Replies left unread by an earlier failed exchange queue up inside the
+        # scope and arrive concatenated, oldest first. The reply to *this*
+        # command is the last one in the blob.
+        start = response.rfind(prefix)
+        if start >= 0:
+            try:
+                return response[start:].decode("ascii").strip()
+            except UnicodeDecodeError:
+                pass
+        # Stale waveform (or other) data came first; let the scope finish
+        # emitting it, then ask again.
+        time.sleep(0.05)
+    raise RuntimeError(f"No valid reply to {command!r}; last reply {response[:40]!r}")
+
+
+def resync_scope(scope: MessageBasedResource) -> None:
+    """Discard replies left queued in the scope by an earlier failed session.
+
+    Replies come back in order, so after draining anything pending, send
+    ``*IDN?`` and read until its answer arrives (everything before it is stale),
+    then drain again.
+    """
+    saved_timeout = scope.timeout
+    saved_termination = scope.read_termination
+    scope.read_termination = None
+    try:
+        scope.timeout = 300
+
+        def drain() -> None:
+            while True:
+                try:
+                    scope.read_raw()
+                except (OSError, ValueError, pyvisa.Error):
+                    return
+
+        drain()
+        scope.write("*IDN?")
+        scope.timeout = 2000
+        for _ in range(8):
+            try:
+                if EXPECTED_MODEL.encode() in scope.read_raw():
+                    break
+            except (OSError, ValueError, pyvisa.Error):
+                break
+        scope.timeout = 300
+        drain()
+    finally:
+        scope.timeout = saved_timeout
+        scope.read_termination = saved_termination
+
+
+def reset_usb_device(resource: str) -> bool:
+    """USB-reset the scope named by a ``USB0::<vid>::<pid>::...`` resource."""
+    parts = resource.split("::")
+    if len(parts) < 4 or not parts[0].upper().startswith("USB"):
+        return False
+    try:
+        import usb.core
+
+        device = usb.core.find(idVendor=int(parts[1]), idProduct=int(parts[2]))
+        if device is None:
+            return False
+        device.reset()
+    except Exception:  # noqa: BLE001 - best-effort recovery only
+        return False
+    time.sleep(3.0)
+    return True
 
 
 def read_waveform_bytes(scope: MessageBasedResource, channel: int) -> bytes:
@@ -195,7 +260,10 @@ def read_channel_volts(
 def combine_channels(
     channels: dict[int, npt.NDArray[np.float64]],
 ) -> npt.NDArray[np.float64]:
-    """Compute ``(CH2 + CH4) - (CH1 + CH3)`` on aligned samples."""
+    """Compute the focus error ``(A + C) - (B + D)`` on aligned samples.
+
+    Quadrant mapping: CH1 = A, CH2 = B, CH3 = C, CH4 = D.
+    """
     missing = set(range(1, 5)) - channels.keys()
     if missing:
         raise ValueError(f"Missing channel data: {sorted(missing)}")
@@ -206,10 +274,10 @@ def combine_channels(
         )
         raise ValueError(f"The scope returned an empty waveform ({lengths})")
     return (
-        channels[2][:point_count]
-        + channels[4][:point_count]
-        - channels[1][:point_count]
-        - channels[3][:point_count]
+        channels[1][:point_count]
+        + channels[3][:point_count]
+        - channels[2][:point_count]
+        - channels[4][:point_count]
     )
 
 
@@ -286,47 +354,117 @@ def acquisition_wait_seconds(args: argparse.Namespace) -> float:
     return max(args.acquisition_interval, 14.0 * args.time_div * 1.05)
 
 
+def wait_until_stopped(
+    scope: MessageBasedResource,
+    timeout_s: float,
+    poll_s: float = 0.02,
+) -> float:
+    """Poll ``TRMD?`` until the scope reports STOP; return that monotonic time."""
+    deadline = time.monotonic() + timeout_s
+    while True:
+        time.sleep(poll_s)
+        if response_value(query_text(scope, "TRMD?")).upper() == "STOP":
+            return time.monotonic()
+        if time.monotonic() >= deadline:
+            raise RuntimeError(f"Scope did not stop within {timeout_s:g} s")
+
+
+def acquire_stop(
+    scope: MessageBasedResource, run_s: float, attempt: int = 0
+) -> float:
+    """Free-run in AUTO for ``run_s`` seconds, then STOP to freeze one record.
+
+    AUTO self-triggers, so this works whatever trigger is configured on the
+    scope. The stopped record is stable, so the four sequential ``WF?`` reads
+    that follow all return the same acquisition. Returns the monotonic time at
+    which the scope was frozen.
+    """
+    scope.write("TRMD AUTO")
+    time.sleep(run_s * (1 + 2 * attempt))
+    scope.write("STOP")
+    return wait_until_stopped(scope, timeout_s=2.0)
+
+
+def acquire_single(
+    scope: MessageBasedResource, timeout_s: float, attempt: int = 0
+) -> float:
+    """Arm one SINGLE acquisition and wait for it to complete.
+
+    Needs the scope's own trigger to fire: ``FRTR`` has no effect on this
+    firmware while armed in SINGLE, so a signal that never meets the trigger
+    condition times out.
+    """
+    scope.write("TRMD SINGLE")
+    try:
+        return wait_until_stopped(scope, timeout_s)
+    except RuntimeError as exc:
+        raise RuntimeError(
+            f"{exc}; the scope's trigger never fired. Fix the trigger on the "
+            "scope or use --acquire stop"
+        ) from exc
+
+
 def capture_frame(
     scope: MessageBasedResource,
     identity: str,
     trigger_mode: str,
     requested_points: int,
     sequence: int,
+    acquire: Callable[[int], float] | None = None,
 ) -> LiveFrame:
-    """Transfer the scope's current four-channel acquisition buffer."""
-    sample_rate = parse_quantity(query_text(scope, "SARA?"))
-    time_per_div = parse_quantity(query_text(scope, "TDIV?"))
-    trigger_delay = parse_quantity(query_text(scope, "TRDL?"))
-    acquired_points = round(parse_quantity(query_text(scope, "SANU? C1")))
-    if sample_rate <= 0 or acquired_points <= 0:
-        raise ValueError(
-            f"Invalid acquisition geometry: {sample_rate=} {acquired_points=}"
-        )
+    """Transfer a four-channel acquisition.
 
-    channel_scales = {
-        channel: (
-            parse_quantity(query_text(scope, f"C{channel}:VDIV?")),
-            parse_quantity(query_text(scope, f"C{channel}:OFST?")),
-        )
-        for channel in range(1, 5)
-    }
-
-    # SP=1 means every point. Larger SP values decimate the complete record,
-    # keeping the live transfer bounded while retaining the full time span.
-    spacing = max(1, math.ceil(acquired_points / requested_points))
-    # On firmware 3.2.1.1.5R6, NP is the raw input window *before* SP is
-    # applied. NP=acquired_points plus SP=N therefore returns roughly
-    # acquired_points/N values spanning the full record.
-    scope.write(f"WFSU SP,{spacing},NP,{acquired_points},FP,0")
-    time.sleep(0.2)
-    channels: dict[int, npt.NDArray[np.float64]] = {}
-    for channel in range(1, 5):
-        try:
-            channels[channel] = read_channel_volts(
-                scope, channel, *channel_scales[channel]
+    With ``acquire`` set, it is called first (with the attempt number, so a
+    retry can run longer) and must leave the scope stopped, returning the
+    monotonic time of that freeze; all channels then come from one
+    frozen record and ``captured_at`` is that time. Otherwise the running AUTO
+    buffers are read back-to-back (channels may come from different records)
+    and ``captured_at`` is the end of the transfer.
+    """
+    attempts = 3 if acquire is not None else 1
+    for attempt in range(attempts):
+        acquired_at = acquire(attempt) if acquire is not None else None
+        sample_rate = parse_quantity(query_text(scope, "SARA?"))
+        time_per_div = parse_quantity(query_text(scope, "TDIV?"))
+        trigger_delay = parse_quantity(query_text(scope, "TRDL?"))
+        acquired_points = round(parse_quantity(query_text(scope, "SANU? C1")))
+        if sample_rate <= 0 or acquired_points <= 0:
+            raise ValueError(
+                f"Invalid acquisition geometry: {sample_rate=} {acquired_points=}"
             )
-        except (OSError, ValueError, pyvisa.Error) as exc:
-            raise RuntimeError(f"Failed while reading CH{channel}: {exc}") from exc
+
+        channel_scales = {
+            channel: (
+                parse_quantity(query_text(scope, f"C{channel}:VDIV?")),
+                parse_quantity(query_text(scope, f"C{channel}:OFST?")),
+            )
+            for channel in range(1, 5)
+        }
+
+        # SP=1 means every point. Larger SP values decimate the complete record,
+        # keeping the live transfer bounded while retaining the full time span.
+        spacing = max(1, math.ceil(acquired_points / requested_points))
+        # On firmware 3.2.1.1.5R6, NP is the raw input window *before* SP is
+        # applied. NP=acquired_points plus SP=N therefore returns roughly
+        # acquired_points/N values spanning the full record.
+        scope.write(f"WFSU SP,{spacing},NP,{acquired_points},FP,0")
+        time.sleep(0.2)
+        channels: dict[int, npt.NDArray[np.float64]] = {}
+        for channel in range(1, 5):
+            try:
+                channels[channel] = read_channel_volts(
+                    scope, channel, *channel_scales[channel]
+                )
+            except (OSError, ValueError, pyvisa.Error) as exc:
+                raise RuntimeError(
+                    f"Failed while reading CH{channel}: {exc}"
+                ) from exc
+        if min(len(values) for values in channels.values()) > 0:
+            break
+        # STOP landed before the scope had finished a complete record (for
+        # example right after a timebase change). Run longer and try again.
+        if attempt == attempts - 1:
+            break
     result = combine_channels(channels)
     channels = {
         channel: values[: result.size] for channel, values in channels.items()
@@ -336,6 +474,13 @@ def capture_frame(
     time_axis = frame_start + np.arange(result.size, dtype=np.float64) * (
         spacing / sample_rate
     )
+    captured_at = time.monotonic()
+    captured_at_utc = datetime.now(timezone.utc)
+    if acquired_at is not None:
+        # Stamp the frame with when the record completed, not when the slow
+        # sequential transfer finished.
+        captured_at_utc -= timedelta(seconds=captured_at - acquired_at)
+        captured_at = acquired_at
     return LiveFrame(
         time_s=time_axis,
         channels_v=channels,
@@ -346,8 +491,8 @@ def capture_frame(
         acquired_points=acquired_points,
         transfer_spacing=spacing,
         sequence=sequence,
-        captured_at=time.monotonic(),
-        captured_at_utc=datetime.now(timezone.utc).isoformat(),
+        captured_at=captured_at,
+        captured_at_utc=captured_at_utc.isoformat(timespec="microseconds"),
     )
 
 
@@ -364,6 +509,42 @@ def validate_identity(identity: str, allow_other_device: bool) -> None:
         )
 
 
+def open_scope(
+    resource_manager: pyvisa.ResourceManager, args: argparse.Namespace
+) -> MessageBasedResource:
+    scope = resource_manager.open_resource(args.resource)
+    scope.timeout = round(args.timeout * 1000)
+    scope.chunk_size = 1024 * 1024
+    scope.write_termination = "\n"
+    scope.read_termination = None
+    return scope
+
+
+def connect_scope(
+    resource_manager: pyvisa.ResourceManager, args: argparse.Namespace
+) -> tuple[MessageBasedResource, str]:
+    """Open the scope, flush stale replies, and read its identity.
+
+    A previous run that died mid-transfer can leave unread replies queued in
+    the scope, or the USB endpoint unresponsive. If the first attempt fails,
+    USB-reset the device once and retry.
+    """
+    scope = open_scope(resource_manager, args)
+    try:
+        resync_scope(scope)
+        return scope, query_text(scope, "*IDN?")
+    except (OSError, ValueError, RuntimeError, pyvisa.Error):
+        scope.close()
+    print("Scope not responding; resetting USB connection...")
+    if not reset_usb_device(args.resource):
+        raise RuntimeError(
+            "Scope not responding. Unplug/replug the USB cable or power-cycle it."
+        )
+    scope = open_scope(resource_manager, args)
+    resync_scope(scope)
+    return scope, query_text(scope, "*IDN?")
+
+
 def graph_live(args: argparse.Namespace) -> None:
     resource_manager = pyvisa.ResourceManager("@py")
     scope: MessageBasedResource | None = None
@@ -372,13 +553,7 @@ def graph_live(args: argparse.Namespace) -> None:
     initial_time_division: str | None = None
     initial_trace_states: dict[int, str] = {}
     try:
-        scope = resource_manager.open_resource(args.resource)
-        scope.timeout = round(args.timeout * 1000)
-        scope.chunk_size = 1024 * 1024
-        scope.write_termination = "\n"
-        scope.read_termination = None
-
-        identity = query_text(scope, "*IDN?")
+        scope, identity = connect_scope(resource_manager, args)
         validate_identity(identity, args.allow_other_device)
         trigger_mode = response_value(query_text(scope, "TRMD?"))
         initial_trigger_mode = trigger_mode
@@ -409,8 +584,22 @@ def graph_live(args: argparse.Namespace) -> None:
         # Keep PyUSB and Matplotlib on the main thread. The SDS1104X-U's
         # USBTMC endpoint becomes unreliable when pyvisa-py I/O is moved to a
         # worker thread.
-        time.sleep(acquisition_wait_seconds(args))
-        frame = capture_frame(scope, identity, trigger_mode, args.points, 1)
+        run_s = acquisition_wait_seconds(args)
+        if args.time_div is not None:
+            time.sleep(run_s)  # let the new timebase settle before the first STOP
+        acquire: Callable[[int], float] | None
+        if args.acquire == "stop":
+            acquire = lambda n: acquire_stop(scope, run_s, n)  # noqa: E731
+            trigger_mode = "AUTO_STOP"
+        elif args.acquire == "single":
+            acquire = lambda n: acquire_single(scope, run_s + 1.0, n)  # noqa: E731
+            trigger_mode = "SINGLE"
+        else:
+            acquire = None
+            time.sleep(run_s)
+        frame = capture_frame(
+            scope, identity, trigger_mode, args.points, 1, acquire
+        )
 
         csv_path = args.csv
         if csv_path is None:
@@ -439,13 +628,13 @@ def graph_live(args: argparse.Namespace) -> None:
             fig, (axis, total_axis) = plt.subplots(2, 1, figsize=(11, 7), sharex=True)
             (line,) = axis.plot([], [], color="#2563eb", linewidth=1.25)
             (total_line,) = total_axis.plot([], [], color="#dc2626", linewidth=1.25)
-            axis.set_ylabel("Differential mean (mV)")
+            axis.set_ylabel("Focus error mean (mV)")
             total_axis.set_ylabel("CH1 + CH2 + CH3 + CH4 mean (mV)")
             total_axis.set_xlabel("Elapsed time (s)")
             for plot_axis in (axis, total_axis):
                 plot_axis.grid(True, alpha=0.25)
             trend_elapsed = [float(first_trend_row[2])]
-            trend_differential_mv = [float(first_trend_row[8]) * 1000.0]
+            trend_focus_error_mv = [float(first_trend_row[8]) * 1000.0]
             trend_total_mv = [float(first_trend_row[12]) * 1000.0]
             pending_events: list[str] = []
 
@@ -468,7 +657,7 @@ def graph_live(args: argparse.Namespace) -> None:
             axis.axhline(0.0, color="#777777", linewidth=0.8, alpha=0.7)
             axis.grid(True, alpha=0.25)
             axis.set_xlabel("Time relative to trigger (s)")
-            axis.set_ylabel("(CH2 + CH4) - (CH1 + CH3) (V)")
+            axis.set_ylabel("Focus error (A + C) - (B + D) (V)")
         status_text = axis.text(
             0.01,
             0.99,
@@ -480,7 +669,7 @@ def graph_live(args: argparse.Namespace) -> None:
             bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.75},
         )
         window_title = (
-            "Siglent settling trend" if args.trend else "Siglent live differential"
+            "Siglent settling trend" if args.trend else "Siglent live focus error"
         )
         fig.canvas.manager.set_window_title(window_title)
         if args.trend:
@@ -488,7 +677,7 @@ def graph_live(args: argparse.Namespace) -> None:
                 "VCA settling trend: press 1 when current turns on, 0 when it turns off"
             )
         else:
-            axis.set_title("Live: (CH2 + CH4) - (CH1 + CH3)")
+            axis.set_title("Live focus error: (A + C) - (B + D)  [CH1=A CH2=B CH3=C CH4=D]")
         plt.tight_layout()
         previous_capture = frame.captured_at
 
@@ -497,7 +686,7 @@ def graph_live(args: argparse.Namespace) -> None:
             update_rate = 1.0 / elapsed if elapsed > 0 and frame.sequence > 1 else 0.0
             previous_capture = frame.captured_at
             if args.trend:
-                line.set_data(trend_elapsed, trend_differential_mv)
+                line.set_data(trend_elapsed, trend_focus_error_mv)
                 total_line.set_data(trend_elapsed, trend_total_mv)
                 for plot_axis in (axis, total_axis):
                     plot_axis.relim()
@@ -530,15 +719,21 @@ def graph_live(args: argparse.Namespace) -> None:
             ):
                 break
 
-            time.sleep(acquisition_wait_seconds(args))
+            if acquire is None:
+                time.sleep(run_s)
             frame = capture_frame(
-                scope, identity, trigger_mode, args.points, frame.sequence + 1
+                scope,
+                identity,
+                trigger_mode,
+                args.points,
+                frame.sequence + 1,
+                acquire,
             )
             if args.trend:
                 marker = pending_events.pop(0) if pending_events else ""
                 row = write_trend_csv(csv_writer, frame, started_at, marker)
                 trend_elapsed.append(float(row[2]))
-                trend_differential_mv.append(float(row[8]) * 1000.0)
+                trend_focus_error_mv.append(float(row[8]) * 1000.0)
                 trend_total_mv.append(float(row[12]) * 1000.0)
             else:
                 write_frame_csv(csv_writer, frame)
@@ -563,7 +758,7 @@ def graph_live(args: argparse.Namespace) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Live-plot (CH2 + CH4) - (CH1 + CH3) from an SDS1104X-U."
+        description="Live-plot the focus error (A + C) - (B + D), with CH1=A, CH2=B, CH3=C, CH4=D, from an SDS1104X-U."
     )
     parser.add_argument(
         "--csv",
@@ -617,6 +812,18 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=0.5,
         help="seconds allowed for each fresh acquisition (default: 0.5)",
+    )
+    parser.add_argument(
+        "--acquire",
+        choices=("stop", "single", "auto"),
+        default="stop",
+        help=(
+            "stop: free-run AUTO, then STOP and read all four channels from the "
+            "frozen record (default; coherent, independent of trigger setup). "
+            "single: arm SINGLE per frame (needs the scope's trigger to fire). "
+            "auto: read the running AUTO buffers (channels may come from "
+            "different records)"
+        ),
     )
     parser.add_argument(
         "--refresh-ms",

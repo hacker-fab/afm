@@ -21,8 +21,8 @@ def read_trend(path: Path) -> dict[str, np.ndarray]:
     return {
         "frame": np.array([int(row["frame"]) for row in rows]),
         "elapsed_s": np.array([float(row["elapsed_s"]) for row in rows]),
-        "differential_mv": np.array(
-            [float(row["differential_mean_v"]) * 1_000.0 for row in rows]
+        "focus_error_mv": np.array(
+            [float(row["focus_error_mean_v"]) * 1_000.0 for row in rows]
         ),
         "total_v": np.array([float(row["total_mean_v"]) for row in rows]),
     }
@@ -49,17 +49,17 @@ def main() -> None:
     kept = ~excluded
 
     # NaNs preserve a visible break across the rejected interval.
-    differential_mv = np.where(kept, data["differential_mv"], np.nan)
+    focus_error_mv = np.where(kept, data["focus_error_mv"], np.nan)
     total_v = np.where(kept, data["total_v"], np.nan)
 
     fig, (axis, total_axis) = plt.subplots(
         2, 1, figsize=(12, 7.2), sharex=True, constrained_layout=True
     )
-    axis.plot(data["elapsed_s"], differential_mv, color="#2563eb", linewidth=1.25)
+    axis.plot(data["elapsed_s"], focus_error_mv, color="#2563eb", linewidth=1.25)
     total_axis.plot(data["elapsed_s"], total_v, color="#dc2626", linewidth=1.25)
 
     axis.set_title("Siglent settling trend")
-    axis.set_ylabel("Differential mean (mV)")
+    axis.set_ylabel("Focus error mean (mV)")
     total_axis.set_ylabel("CH1 + CH2 + CH3 + CH4 mean (V)")
     total_axis.set_xlabel("Elapsed time (s)")
 
