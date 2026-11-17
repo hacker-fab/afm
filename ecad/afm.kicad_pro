@@ -485,7 +485,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "AFM_Lib"
+    ]
   },
   "meta": {
     "filename": "afm.kicad_pro",
@@ -712,7 +714,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "C7,C14,C16-21,R12,R16,R18-28,Q5,U1,U5-6,#PWR15-18,#PWR25,#PWR27-37",
+    "used_designators": "Y1,U1,U4-7,Q5,#PWR15-18,#PWR24-48,C7,C14,C16-32,R12,R15-29",
     "variants": []
   },
   "sheets": [
@@ -734,7 +736,7 @@
     ],
     [
       "609e7c1b-9183-4cd7-8dc2-8610036ea669",
-      "MCU"
+      "Processing"
     ],
     [
       "152e488a-5c59-4955-a770-fd5dc463781b",

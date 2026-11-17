@@ -894,16 +894,6 @@
 		)
 		(uuid "4cc354e6-44a3-4f88-a0b9-4991319ee650")
 	)
-	(text "ADS1256?"
-		(exclude_from_sim no)
-		(at 163.322 97.282 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f2b41418-cb51-4173-8929-77aa25cc30d1")
-	)
 	(junction
 		(at 48.26 77.47)
 		(diameter 0)

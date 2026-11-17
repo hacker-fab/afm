@@ -540,7 +540,7 @@
 			(color 0 0 255 0.09019607843)
 		)
 		(uuid "609e7c1b-9183-4cd7-8dc2-8610036ea669")
-		(property "Sheetname" "MCU"
+		(property "Sheetname" "Processing"
 			(at 180.34 89.4584 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -551,7 +551,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "mcu.kicad_sch"
+		(property "Sheetfile" "processing.kicad_sch"
 			(at 180.34 117.4246 0)
 			(show_name no)
 			(do_not_autoplace no)

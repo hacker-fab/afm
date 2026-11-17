@@ -387,7 +387,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 45.72 10.16 0)
+			(at -19.05 -23.368 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -397,7 +397,7 @@
 			)
 		)
 		(property "Value" "ADS1256IDBT"
-			(at 45.72 7.62 0)
+			(at -12.446 -25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -407,7 +407,7 @@
 			)
 		)
 		(property "Footprint" "AFM_Footprints:DB28"
-			(at 0 0 0)
+			(at 0 -43.434 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -419,7 +419,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/ads1256"
-			(at 0 0 0)
+			(at 0 -46.482 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -474,56 +474,8 @@
 			)
 		)
 		(symbol "ADS1256IDBT_0_1"
-			(polyline
-				(pts
-					(xy 7.62 5.08) (xy 7.62 -38.1)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 7.62 -38.1) (xy 83.82 -38.1)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 83.82 5.08) (xy 7.62 5.08)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-			(polyline
-				(pts
-					(xy 83.82 -38.1) (xy 83.82 5.08)
-				)
-				(stroke
-					(width 0.127)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
 			(pin power_in line
-				(at 0 0 0)
+				(at -2.54 26.67 270)
 				(length 7.62)
 				(name "AVDD"
 					(effects
@@ -541,7 +493,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -2.54 0)
+				(at -2.54 -29.21 90)
 				(length 7.62)
 				(name "AGND"
 					(effects
@@ -559,7 +511,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -5.08 0)
+				(at -21.59 13.97 0)
 				(length 7.62)
 				(name "VREFN"
 					(effects
@@ -577,7 +529,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -7.62 0)
+				(at -21.59 16.51 0)
 				(length 7.62)
 				(name "VREFP"
 					(effects
@@ -595,7 +547,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -10.16 0)
+				(at -21.59 -13.97 0)
 				(length 7.62)
 				(name "AINCOM"
 					(effects
@@ -613,7 +565,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -12.7 0)
+				(at -21.59 6.35 0)
 				(length 7.62)
 				(name "AIN0"
 					(effects
@@ -631,7 +583,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -15.24 0)
+				(at -21.59 3.81 0)
 				(length 7.62)
 				(name "AIN1"
 					(effects
@@ -649,7 +601,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -17.78 0)
+				(at -21.59 1.27 0)
 				(length 7.62)
 				(name "AIN2"
 					(effects
@@ -667,7 +619,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -20.32 0)
+				(at -21.59 -1.27 0)
 				(length 7.62)
 				(name "AIN3"
 					(effects
@@ -685,7 +637,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -22.86 0)
+				(at -21.59 -3.81 0)
 				(length 7.62)
 				(name "AIN4"
 					(effects
@@ -703,7 +655,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -25.4 0)
+				(at -21.59 -6.35 0)
 				(length 7.62)
 				(name "AIN5"
 					(effects
@@ -721,7 +673,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -27.94 0)
+				(at -21.59 -8.89 0)
 				(length 7.62)
 				(name "AIN6"
 					(effects
@@ -739,7 +691,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -30.48 0)
+				(at -21.59 -11.43 0)
 				(length 7.62)
 				(name "AIN7"
 					(effects
@@ -757,7 +709,7 @@
 				)
 			)
 			(pin input line
-				(at 0 -33.02 0)
+				(at 22.86 -11.43 180)
 				(length 7.62)
 				(name "*SYNC/*PDWN"
 					(effects
@@ -775,7 +727,7 @@
 				)
 			)
 			(pin input line
-				(at 91.44 -33.02 180)
+				(at 22.86 -13.97 180)
 				(length 7.62)
 				(name "*RESET"
 					(effects
@@ -793,7 +745,7 @@
 				)
 			)
 			(pin power_in line
-				(at 91.44 -30.48 180)
+				(at 0 26.67 270)
 				(length 7.62)
 				(name "DVDD"
 					(effects
@@ -811,7 +763,7 @@
 				)
 			)
 			(pin power_in line
-				(at 91.44 -27.94 180)
+				(at 0 -29.21 90)
 				(length 7.62)
 				(name "DGND"
 					(effects
@@ -829,7 +781,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 91.44 -25.4 180)
+				(at 22.86 -19.05 180)
 				(length 7.62)
 				(name "XTAL2"
 					(effects
@@ -847,7 +799,7 @@
 				)
 			)
 			(pin input line
-				(at 91.44 -22.86 180)
+				(at 22.86 -16.51 180)
 				(length 7.62)
 				(name "XTAL1/CLKIN"
 					(effects
@@ -865,7 +817,7 @@
 				)
 			)
 			(pin input line
-				(at 91.44 -20.32 180)
+				(at 22.86 3.81 180)
 				(length 7.62)
 				(name "*CS"
 					(effects
@@ -883,7 +835,7 @@
 				)
 			)
 			(pin output line
-				(at 91.44 -17.78 180)
+				(at 22.86 -3.81 180)
 				(length 7.62)
 				(name "*DRDY"
 					(effects
@@ -901,7 +853,7 @@
 				)
 			)
 			(pin output line
-				(at 91.44 -15.24 180)
+				(at 22.86 -1.27 180)
 				(length 7.62)
 				(name "DOUT"
 					(effects
@@ -919,7 +871,7 @@
 				)
 			)
 			(pin input line
-				(at 91.44 -12.7 180)
+				(at 22.86 1.27 180)
 				(length 7.62)
 				(name "DIN"
 					(effects
@@ -937,7 +889,7 @@
 				)
 			)
 			(pin input line
-				(at 91.44 -10.16 180)
+				(at 22.86 -6.35 180)
 				(length 7.62)
 				(name "SCLK"
 					(effects
@@ -955,7 +907,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 91.44 -7.62 180)
+				(at 22.86 16.51 180)
 				(length 7.62)
 				(name "D0/CLKOUT"
 					(effects
@@ -973,7 +925,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 91.44 -5.08 180)
+				(at 22.86 13.97 180)
 				(length 7.62)
 				(name "D1"
 					(effects
@@ -991,7 +943,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 91.44 -2.54 180)
+				(at 22.86 11.43 180)
 				(length 7.62)
 				(name "D2"
 					(effects
@@ -1009,7 +961,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 91.44 0 180)
+				(at 22.86 8.89 180)
 				(length 7.62)
 				(name "D3"
 					(effects
@@ -1019,6 +971,244 @@
 					)
 				)
 				(number "28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "ADS1256IDBT_1_1"
+			(rectangle
+				(start -13.97 19.05)
+				(end 15.24 -21.59)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type color)
+					(color 255 255 194 1)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "OPA350"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 7.112 -3.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA350"
+			(at 10.16 -5.588 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:Texas_S-PDSO-G8_3x3mm_P0.65mm"
+			(at 0 -30.734 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/opa350.pdf?ts=1794958143402&ref_url=https%253A%252F%252Fwww.google.com%252F"
+			(at 0 -33.274 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "OPAx350 High-Speed, Single-Supply, Rail-to-Rail Operational Amplifiers MicroAmplifier Series"
+			(at 0 -27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "OPA350_0_1"
+			(polyline
+				(pts
+					(xy -3.81 5.08) (xy 6.35 0) (xy -3.81 -5.08) (xy -3.81 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "OPA350_1_1"
+			(pin no_connect line
+				(at 16.51 -16.51 0)
+				(length 3.81)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -6.35 2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -6.35 -2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 3.81)
+				(name "V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 16.51 -19.05 0)
+				(length 3.81)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 8.89 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 7.62 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 16.51 -21.59 0)
+				(length 3.81)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
