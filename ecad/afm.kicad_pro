@@ -517,19 +517,9 @@
       {
         "bus_width": 8,
         "line_style": 0,
-        "name": "GND_LD",
+        "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2,
-        "schematic_color": "rgb(72, 72, 72)",
-        "tuning_profile": "",
-        "wire_width": 12
-      },
-      {
-        "bus_width": 8,
-        "line_style": 0,
-        "name": "GND_PD",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
         "schematic_color": "rgb(0, 0, 0)",
         "tuning_profile": "",
         "wire_width": 12
@@ -539,10 +529,20 @@
         "line_style": 0,
         "name": "POWER",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgb(255, 0, 0)",
         "tuning_profile": "",
         "wire_width": 12
+      },
+      {
+        "bus_width": 6,
+        "line_style": 1,
+        "name": "VREF",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgb(194, 0, 0)",
+        "tuning_profile": "",
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -560,28 +560,12 @@
         "pattern": "-**V**"
       },
       {
-        "netclass": "GND_LD",
-        "pattern": "GND_LD"
+        "netclass": "GND",
+        "pattern": "GND"
       },
       {
-        "netclass": "Default",
-        "pattern": "/LD_DVD_LD"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DVD_LD"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/Laser APC/LD_DVD"
-      },
-      {
-        "netclass": "GND_PD",
-        "pattern": "GND_PD"
-      },
-      {
-        "netclass": "POWER_PD",
-        "pattern": "POWER_PD"
+        "netclass": "VREF",
+        "pattern": "**VREF**"
       }
     ]
   },
@@ -714,7 +698,7 @@
         "uuid": "62de9aa8-4539-4ecb-8acc-2c7a46b3005b"
       }
     ],
-    "used_designators": "Y1,U1,U4-7,Q5,#PWR15-18,#PWR24-48,C7,C14,C16-32,R12,R15-29",
+    "used_designators": "J2,R12,R15-36,#PWR4,#PWR8-10,#PWR15-18,#PWR24-51,C6-7,C13-35,Q5,U1,U4-7,Y1",
     "variants": []
   },
   "sheets": [
@@ -728,7 +712,11 @@
     ],
     [
       "1dc792cd-316d-4a98-a06d-e76af60f931f",
-      "PDIC Pre-processing"
+      "PDIC_ADC"
+    ],
+    [
+      "20c5191a-a3f7-40bf-85db-3c676020f677",
+      "Piezo Stage"
     ],
     [
       "15680402-d9a3-4e18-a79a-80d2d5ffc55c",

@@ -3533,7 +3533,7 @@
 				)
 			)
 		)
-		(property "Value" "VREF = 0.18V"
+		(property "Value" "VREF_0.18V"
 			(at 119.38 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3953,7 +3953,7 @@
 				)
 			)
 		)
-		(property "Value" "GND_LD"
+		(property "Value" "GND"
 			(at 87.63 132.0799 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -3047,7 +3047,7 @@
 		)
 		(uuid "be550654-f83c-4464-be32-00e3b23406c4")
 	)
-	(hierarchical_label "DAC_MIDPT_Vref"
+	(hierarchical_label "DAC_MIDPT_VREF"
 		(shape input)
 		(at 40.64 86.36 180)
 		(effects
