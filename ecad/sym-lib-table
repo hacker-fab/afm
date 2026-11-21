@@ -1,4 +1,5 @@
 (sym_lib_table
 	(version 7)
 	(lib (name "AFM_Lib") (type "KiCad") (uri "${KIPRJMOD}/symbols/AFM_Lib.kicad_sym") (options "") (descr ""))
+	(lib (name "teensy") (type "KiCad") (uri "/Users/yash/Documents/KiCad/10.0/symbols/teensy_library/teensy.kicad_sym") (options "") (descr ""))
 )
